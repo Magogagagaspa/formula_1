@@ -1,0 +1,1242 @@
+* {box-sizing: border-box;}
+body,
+html,
+menu{padding: 0; margin: 0; margin-bottom: 0%;}
+
+@font-face {
+    src: url(font/Formula1-Regular.otf);
+    font-family: 'formula1-regular';
+}
+@font-face {
+    src: url(font/Formula1-Bold.otf);
+    font-family: 'formula1-bold';
+}
+@font-face {
+    src: url(font/Formula1-Wide.otf);
+    font-family: 'formula1-wide';
+}
+
+p{font-family: 'formula1-regular';}
+
+body{
+    background: black;
+}
+
+.home{
+    background: #fff;
+}
+
+/*HEADER*/
+
+header{background-color: #fff; padding: 0px 0px 0px 15px; width: 100%; display: flex; flex-wrap: nowrap;}
+
+nav{
+    background-color: #fff;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.menu{
+    width: 80%;
+    text-align: center;
+    font-size: 15px;
+    z-index: 2;
+}
+
+.menu a{
+    font-family: 'formula1-bold';
+}
+
+.piloti a{font-family: 'formula1-regular';}
+.teams a{font-family: 'formula1-regular';}
+.circuiti a{font-family: 'formula1-regular';}
+
+
+.fotomenu{
+    width: 10%;
+    text-align: center;
+}
+
+.fotomenuhome{
+    width: 15%;
+    text-align: center;
+}
+
+
+
+.dropdown {
+    overflow: hidden;
+    width: 14.28%;
+    z-index: 2;
+}
+  
+.dropbtn {
+    font-size: 20px;  
+    height: 60px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: inherit;
+    width: 100%;
+}
+
+.dropbtn a{
+    text-decoration: none;
+    color: #000;
+}
+
+.dropdown:hover .dropbtn{
+    background-color: red;
+    transform: scale(1.1);
+    transition: 0.5s;
+    opacity: 1;
+}
+
+
+.dropdown-content-piloti{
+    display: none;
+    font-size: 20px;
+    font-family: 'formula1-regular';
+    position: absolute;
+    background-color: whitesmoke;
+    min-width: 160px;
+    width: 28.26%; 
+}
+
+.dropdown-content-piloti a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content-piloti a:hover {
+    background-color: lightgray;
+    transform: scale(1.1);
+}
+
+.dropdown:hover .dropdown-content-piloti {
+    display: block;
+    flex-wrap: wrap;
+    display: flex;
+    animation: dropdown2 0.3s ease-in-out;
+}
+
+@keyframes dropdown2 {from {opacity: 0; transform: translateY(-20px);} to {opacity: 1;  transform: translateY(0px);}}
+
+.piloti{
+    width: 50%;
+    text-align: center;
+    font-size: 15px;
+}
+
+.dropdown-content-teams{
+    display: none;
+    font-size: 20px;
+    font-family: 'formula1-regular';
+    position: absolute;
+    background-color: whitesmoke;
+    min-width: 160px;
+    width: 28.26%;
+}
+
+.dropdown-content-teams a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content-teams a:hover {
+    background-color: lightgray;
+    transform: scale(1.1);
+}
+
+.dropdown:hover .dropdown-content-teams {
+    display: block;
+    flex-wrap: wrap;
+    display: flex;
+    animation: dropdown2 0.3s ease-in-out;
+}
+
+.teams{
+    width: 50%;
+    text-align: center;
+    font-size: 15px;
+}
+
+.dropdown-content-circuiti{
+    display: none;
+    font-size: 18px;
+    font-family: 'formula1-regular';
+    position: absolute;
+    background-color: whitesmoke;
+    min-width: 160px;
+    width: 42.40%;
+}
+
+.dropdown-content-circuiti a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content-circuiti a:hover {
+    background-color: lightgray;
+    transform: scale(1.1);
+}
+
+.dropdown:hover .dropdown-content-circuiti {
+    display: block;
+    flex-wrap: wrap;
+    display: flex;
+    animation: dropdown2 0.3s ease-in-out;
+}
+
+.circuiti{
+    width: 33.33%;
+    text-align: center;
+    font-size: 15px;
+}
+
+#f1logo{
+    width: 80px;
+    height: 50px;
+    margin-top: 8px;
+}
+
+
+
+#fialogo{
+    width: 80px;
+    height: 50px;
+    margin-top: 8px;
+}
+
+#caschi{
+    width: 35px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+#flag{
+    width: 35px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.icon_bar span{display: block; height: 3px; width: 30px; margin-bottom: 5px; background: #000;}
+.icon_bar {display: block; float: left; padding: 20px; display: none;}
+
+@media (max-width:1392px){
+    header{justify-content: space-between;}
+    .icon_bar {display: block;}
+    .menu { position: absolute; top: 65px;  width: 100%; margin: 0 auto; display: none;}
+    nav{flex-direction: column; margin: 0 auto; }
+    .dropdown  {margin: 0 auto; width: 100%;}
+    .dropbtn{width: 100%;}
+    .dropdown:hover .dropdown-content-circuiti{display: none;}   
+    .dropdown:hover .dropdown-content-teams { display: none;}
+    .dropdown:hover .dropdown-content-piloti { display: none;}
+
+    .is-open{display: block;}
+    
+}
+
+@media (max-width:1062px){
+    header{justify-content: space-between;}
+    .icon_bar {display: block;}
+    .menu { position: absolute; top: 65px;  width: 100%; margin: 0 auto; display: none;}
+    nav{flex-direction: column; margin: 0 auto; }
+    .dropdown  {margin: 0 auto; width: 100%;}
+    .dropbtn{width: 100%;}
+    .dropdown:hover .dropdown-content-circuiti{display: none;}   
+    .dropdown:hover .dropdown-content-teams { display: none;}
+    .dropdown:hover .dropdown-content-piloti { display: none;}
+    .accesso_iscrizione{position: absolute; left: 10px;}
+
+
+
+    .is-open{display: block;}
+    
+}
+
+
+
+@media(max-width:768px){
+
+    header{ padding: 0px 0px 0px 0px;}
+    .icon_bar {display: block;}
+    .menu { position: absolute; top: 65px;  width: 100%; margin: 0 auto; display: none;}
+    nav{flex-direction: column; margin: 0 auto; }
+    .dropdown  {margin: 0 auto; width: 100%;}
+    .dropbtn{width: 100%;}
+    .dropdown:hover .dropdown-content-circuiti{display: none;}   
+    .dropdown:hover .dropdown-content-teams { display: none;}
+    .dropdown:hover .dropdown-content-piloti { display: none;}
+
+    .is-open{display: block;}
+    .fotomenu{width: 33%;}
+    .griglia{margin: 10px;}
+    .notizies{width: 100%;}
+    .notizied{width: 100%;}
+}
+
+
+/*HOME*/
+
+.griglia{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    z-index: 1;
+    margin-top: 30px;
+}
+
+.accesso_iscrizione{
+    position: absolute;
+    right: 90px;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 53px;
+}
+
+.saluto{
+    position: absolute;
+    right: 80px;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 53px;
+}
+
+.saluto_utente{
+    background: white;
+    width: 50%;
+}
+
+.saluto_utente p{
+    color: black;
+    font-family: 'formula1-bold';
+    text-align: center;
+}
+
+#area_personale{
+    position: absolute;
+    right: 10px;
+    width: 70px;
+    height: 53px;
+}
+
+#immagineomino{
+    width: 55px;
+    height: 53px;
+}
+
+.Login{
+    width: 100px;
+    justify-content: center;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.Login:hover{
+    background-color: red;
+    transform: scale(1.1);
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.Login a{
+    font-family: 'formula1-bold';
+    text-decoration: none;
+}
+
+#iscrizione{
+    background: black;
+    color: white;
+    width: 50%;
+    height: 100%;
+}
+
+#iscrizione a{
+    text-decoration: none;
+    color: white;
+    font-family: 'formula1-bold';
+}
+
+#acc a{
+    text-decoration: none;
+    color: black;
+    font-family: 'formula1-bold';
+}
+
+
+#acc{
+    background: white;
+    width: 50%;
+}
+
+#logout{
+    border: none;
+    background: white;
+    font-family: 'formula1-bold';
+    font-size: 20px;   
+    height: 7.5%;
+    margin: 0 auto;
+}
+
+
+
+#form2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#scacchi{
+    display: flex;
+    height: 60px;
+    background: url(immagini/starter.jpg);
+    background-repeat: repeat;
+    background-size: 70px;
+    background-position: center;
+    border-top: solid red 4px;
+    border-bottom: solid red 4px;
+    margin-bottom: 10px;
+}
+
+.notizies{
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+    border-right: 15px solid red;
+    border-top: 20px solid red;
+    border-radius: 35px;
+    margin-bottom: 10px;
+}
+
+.notizied{
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+}
+
+#text{
+    color: #000;
+    font-size: 15px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+#titoli{
+    color: red ;
+    margin-right: 10px;
+    text-align: left;
+    font-family: 'formula1-wide';
+    border-bottom: solid rgb(201, 198, 198) 4px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-radius: 20px;
+}
+
+.sigla {
+    max-width: 1000px;
+    position: relative;
+    margin: auto 30px;
+    border-bottom: solid red 10px;
+    margin-bottom: 20px;
+  }
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto 30px;
+    border-bottom: solid red 10px;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+    
+  .numbertext {
+    color: #000;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    font-family: 'formula1-regular';
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+/*FOOTER*/
+
+footer{text-align: center; font-size: 12px; background-color: #000;}
+footer p{color: #fff;}
+
+.foot{
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+/*CLASSIFICA*/
+
+.tabella{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.tab{
+    justify-content: center;
+    border-top: solid red 20px;
+    border-left: solid red 20px;
+    border-bottom: solid red 4px;
+    border-right: solid red 4px;
+    border-radius: 35px;
+    width: 100%;
+}
+
+#nomigc{
+    text-align: center;
+    font-family: 'formula1-bold'; 
+    color: #fff;
+    font-size: 15px;
+    margin: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #3f3d3d;
+}
+
+#nomigs{
+    text-align: center;
+    font-family: 'formula1-bold'; 
+    color: #fff;
+    font-size: 15px;
+    margin: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#tot{
+    text-align: center;
+    font-family: 'formula1-bold'; 
+    border-left: solid #fff 2px;
+    color: #fff;
+    font-size: 15px;
+    margin: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#punti{
+    text-align: center;
+    font-family: 'formula1-regular';
+    border-left: solid #fff 2px;
+    font-size: 15px;
+    color: #fff;
+}
+
+#puntig{
+    text-align: center;
+    font-family: 'formula1-regular';
+    border-left: solid #fff 2px;
+    font-size: 15px;
+    background-color: #3f3d3d;
+    color: #fff;
+}
+
+#titoloclassifica{
+    text-align: center;
+    font-family: 'formula1-wide';
+    color: #fff;
+}
+
+#gp{
+    border-left: solid #fff 2px;
+    text-align: center;
+    
+}
+
+#bandiera{
+    width: 35px;
+    height: 25px;
+    padding-top: 4px;
+}
+
+/*TEAMS*/
+
+.team{
+    margin: 40px;
+    z-index: 1;
+}
+
+#RDB{
+    width: 100%;
+    border-top: solid #011C31 20px;
+    border-right: solid #011C31 5px;
+    border-left: solid #011C31 20px;
+    border-bottom: solid #011C31 5px;
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+#FRR{
+    width: 100%;
+    border-top: solid #DB1014 20px;
+    border-right: solid #DB1014 5px;
+    border-left: solid #DB1014 20px;
+    border-bottom: solid #DB1014 5px;
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    background-color: #fff;
+}
+
+#MRC{
+    width: 100%;
+    border-top: solid #1DC5B4 20px;
+    border-right: solid #1DC5B4 5px;
+    border-left: solid #1DC5B4 20px;
+    border-bottom: solid #1DC5B4 5px;
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    background-color: #fff;
+}
+
+#MCL{
+    width: 100%;
+    border-top: solid #F16E2E 20px;
+    border-right: solid #F16E2E 5px;
+    border-left: solid #F16E2E 20px;
+    border-bottom: solid #F16E2E 5px;
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    background-color: #fff;
+}
+
+#ALP{
+    width: 100%;
+    border-top: solid #0072C8 20px;
+    border-right: solid #0072C8 5px;
+    border-left: solid #0072C8 20px;
+    border-bottom: solid #0072C8 5px;
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    background-color: #fff;
+}
+
+#ALF{
+    width: 100%;
+    border-top: solid #792D3C 20px;
+    border-right: solid #792D3C 5px;
+    border-left: solid #792D3C 20px;
+    border-bottom: solid #792D3C 5px;
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    background-color: #fff;
+}
+
+#AST{
+    width: 100%;
+    border-top: solid #015850 20px;
+    border-right: solid #015850 5px;
+    border-left: solid #015850 20px;
+    border-bottom: solid #015850 5px;
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    background-color: #fff;
+}
+
+#HAAS{
+    width: 100%;
+    border-top: solid #EC1A3B 20px;
+    border-right: solid #EC1A3B 5px;
+    border-left: solid #EC1A3B 20px;
+    border-bottom: solid #EC1A3B 5px;
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    background-color: #fff;
+}
+
+#AT{
+    width: 100%;
+    border-top: solid #002841 20px;
+    border-right: solid #002841 5px;
+    border-left: solid #002841 20px;
+    border-bottom: solid #002841 5px;
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    background-color: #fff;
+}
+
+#WLM{
+    width: 100%;
+    border-top: solid #009FDF 20px;
+    border-right: solid #009FDF 5px;
+    border-left: solid #009FDF 20px;
+    border-bottom: solid #009FDF 5px;
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    background-color: #fff;
+}
+
+.team2 .logoscuderia{
+    width: 19%;
+    display: flex;
+    align-items: center;
+}
+
+.logoscuderia img{width: 100%; height:auto; margin-left: 5px;}
+#FRR .logoscuderia img{width: 85%; height:auto ;margin-left: 5px;}
+
+
+.squadra{
+    width: 100%;
+}
+
+.squadra h1{
+    font-family: 'formula1-bold';
+    margin-left: 25px;
+    color: #000;
+    padding-left: 20px;
+}
+
+.squadra p{
+    margin-left: 25px;
+    font-family: 'formula1-regular';
+    color: #000;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.macchina{
+    width: 39%;
+    display: flex;
+    align-items: center;
+}
+
+.macchina img{
+    width: 100%;
+}
+
+.fotopilota{
+    width: 20%;
+}
+
+.contenitore_squadra{
+    width: 42%;
+}
+
+/*PILOTI*/
+
+.contenitore_pilota{
+    width: 30%;
+    display: flex; 
+    align-items: center;
+}
+
+.pilota2{display: flex;}
+.fotopilota{width: 25%; margin: auto 0px;}
+.fotopilota img{ width: 90%; height: auto ;margin-left: 15px; display: block;}  
+.casco{width: 20%;margin: auto 0px;}
+.casco img{width: 90%; height: auto;}
+.numero{width: 23%; margin: auto 0px; padding-left: 10px;}
+.numero img{width: 80%; height: auto;}
+
+.pilota h1{
+    font-family: 'formula1-bold';
+    color: #000;
+    font-size: 30px;
+}
+
+.pilota p{
+    font-family: 'formula1-regular';
+    color: #000;
+    font-size: 20px;
+}
+
+/*CIRCUITI*/
+.pistef1{display: flex; flex-wrap: wrap;}
+
+.circuit{
+    width: 48%;
+    border-top: solid red 20px;
+    border-right: solid red 5px;
+    border-left: solid red 20px;
+    border-bottom: solid red 5px;
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    z-index: 1;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.layout{
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.layout img{width: 95%; height:auto;  padding-left: 20px;}
+
+.conenitore_circuiti{
+    width: 65%;
+}
+
+.circuito h1{
+    font-family: 'formula1-bold';
+    color: #000;
+    font-size: 19px;
+}
+
+/*PAGINA LOGIN */
+
+.contenitore_pagina_accesso{
+    min-height: 350px;
+    background: white;
+}
+
+#paccesso{
+    color: black;
+    background: white;
+    text-align: center;
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
+
+.contenitore_accesso{   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    min-height: 300px;
+    position: relative;
+}
+
+
+.contenitore_iscrizione{   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    min-height: 550px;
+    position: relative;
+}
+
+
+#haccesso{
+    height: 30%;
+    background-color: #46494a;
+    flex-wrap: wrap;
+    padding: 0;
+
+}
+
+.logoaccesso {
+    height: 200px;
+    width: 100%;
+}
+
+
+.logoaccesso img{
+    height: 100%;
+    padding: 20px;
+}
+
+.cambio{
+    margin: 0 auto;
+    display: flex;
+    font-family: 'formula1-regular';
+    background: #707171;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.cambio_a:hover{
+    background: white;
+    transform: scale(1.1);
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.cambio_a a{
+    text-decoration: none;
+    color: #000;
+}
+
+.cambio_a{
+    padding: 10px;
+    margin: 0px 15px;
+}
+
+#formaccesso{
+    width: 600px;
+    display: flex;
+    font-family: 'formula1-regular';
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+    border-top: solid red 15px;
+    border-right: solid red 15px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+
+label{
+    padding: 5px 5px 0px 5px;
+    background: lightgrey;
+    width: 100%;
+}
+
+input{
+    height: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+    border: solid black 3px;
+}
+
+input::placeholder{
+    font-family: 'formula1-regular';
+}
+
+#email{
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    border: solid black 3px;
+}
+
+#password{
+    width: 100%;
+    border-radius: 2px;
+    border: solid black 3px;    
+    margin-bottom: 30px;
+}
+
+#bottone_dati{
+    width: 30%;
+    text-align: center;
+    height: 50px;
+    border: solid black 2px;
+    border-radius: 2px;
+    background: whitesmoke;
+    font-family: 'formula1-regular';
+    font-size: 15px;
+}
+
+#bottone_dati:hover{
+    background: red;
+    transition: 0.5s;
+    opacity: 1;
+    transform: scale(1.1);
+    font-size: 17px;
+}
+
+
+/*AREA PERSONALE*/
+
+.contenitore_area_personale{
+    display: flex;
+    background: #717171;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info{
+    position: relative;
+    border-top: solid red 10px;
+    border-right: solid red 10px;
+    border-radius: 10px;
+    background: lightgrey;
+    width: 50%;
+    margin: 20px auto;
+    min-height: 180px;
+}
+.credenziali{
+    width: 50%;
+}
+
+.contieni_edit{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contieni_edit .edit{
+    font-family: 'formula1-regular';
+    text-align:center;
+    border-bottom: solid black 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin: auto;
+  
+}
+
+.contieni_edit a{ 
+    text-decoration: NONE;
+    color: black
+}
+
+.credenziali p{
+    font-family: 'formula1-regular';
+    text-align:center;
+    border-bottom: solid black 2px;
+    margin: 15px auto;
+}
+
+.contenitore_info{
+    display: flex;
+}
+
+
+
+.modifican{
+    position: absolute;
+    right: 390px;
+    top: 130px;
+    display: none;
+}
+
+.modificac{
+    position: absolute;
+    right: 390px;
+    top: 180px;
+    display: none;
+}
+
+.modificae{
+    position: absolute;
+    right: 390px;
+    top: 230px;
+    display: none;
+}
+
+.modificap{
+    position: absolute;
+    right: 390px;
+    top: 240px;
+    display: none;
+}
+
+#form_modifica{
+   
+    width: 300px;
+}
+
+#form_modifica input{
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+    border: solid red 2px;
+}
+
+#bottone_modifica{
+    font-family: 'formula1-bold';
+}
+
+#conferma_modifica{
+    text-align: center;
+}
+
+.contenitore_img{
+    background: #717171;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#form_img_prf{
+    background: lightgrey;
+    width: 280px;
+    border-top: solid red 4px;
+    border-right: solid red 4px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+#input_img_prf{
+    
+    border: none;
+    font-family: 'formula1-regular';
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 30px;
+}
+
+
+#immaginiprf{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+    
+.apri{display: block;}
+
+
+
+/*MEDIA*/
+@media(max-width:946px){  
+    /*TEMAS*/     
+    .team2{position: relative;}
+    .squadra{width: 100%;}
+    .logoscuderia{margin: 5px auto;}
+    .contenitore_squadra{width: 100%;}
+    .squadra h1{width: 100%; text-align: center; padding: 0px; margin-left: 0px;}
+    .squadra p{text-align: center; margin-left: 0px; padding: 0px;}  
+    .contenitore-squadra{width: 100%;text-align: center;}
+    .squadra{width: 100%; text-align: center;}
+    .macchina{width: 100%; height: auto; display: flex; align-items: center;}
+    .macchina img{height: 100%; width: 100%;} 
+}
+
+@media(max-width:1400px){
+    /*PILOTI*/
+    .pilota2{position: relative; margin: auto;}
+    .pilota{width: 100%; text-align: center;}
+    .fotopilota{margin: 5px auto;}
+    .contenitore_pilota{width: 100%; text-align: center;}
+    .pilota h1{width: 100%; text-align: center; padding: 0px; margin-left: 0px;}
+    .pilota p{text-align: center; margin-left: 0px; padding: 0px;}  
+    .casco{margin: auto; width: 25%; height: auto; display: flex; align-items: center; padding: 10px 0px 10px 0px;}
+    .casco img{height: 100%; width: 100%;}
+    .numero{margin: auto; width: 25%; height: auto; display: flex; align-items: center; padding: 10px 0px 10px 0px;}
+    .numero img{height: 100%; width: 100%;}
+}
+
+@media(max-width:768px){
+    /*TEAMS*/
+    .team2{position: relative;}
+    .squadra{width: 100%;}
+    .logoscuderia img{display: none;}
+    .contenitore_squadra{width: 100%;}
+    .squadra h1{font-size: 15px; width: 100%; text-align: center; padding: 0px; margin-left: 0px;}
+    .squadra p{font-size: 10px; text-align: center; margin-left: 0px; padding: 0px;}    
+    .macchina{width: 100%; height: 50%; padding: 10px 5px 0px 5px;}
+    .macchina img{margin: auto;}
+
+    /*PILOTI*/
+    .pilota2{position: relative; margin: auto;}
+    .pilota{width: 100%; text-align: center;}
+    .fotopilota{margin: 5px auto; width: 150px;}
+    .contenitore_pilota{width: 100%; text-align: center;}
+    .pilota h1{font-size: 20px; width: 100%; text-align: center; padding: 0px; margin-left: 0px;}
+    .pilota p{font-size: 15px; text-align: center; margin-left: 0px; padding: 0px;}  
+    .casco{margin: auto; width: 25%; height: auto; display: flex; align-items: center; padding: 10px 0px 10px 0px;}
+    .casco img{height: 100%; width: 130px;}
+    .numero{margin: auto; width: 25%; height: auto; display: flex; align-items: center; padding: 10px 0px 10px 0px; }
+    .numero img{height: 100%; width: 130px;}
+}
+
+@media (max-width:1392px){
+    .notizies{width: 100%; text-align: center;}
+    .notizied{width: 100%; justify-content: center; align-items: center;}
+    .sigla{width: 100%; margin: 20px auto;}
+    .slideshow-container{width: 100%; margin: 20px auto;}    
+}
+
+/*CIRCUITI*/
+
+@media (max-width:1050px) {
+    .circuit{width: 100%; text-align: center; align-items: center; display: flex; flex-direction: column;}
+    .circuito{text-align: center;}
+    .layout{position: relative;}
+    
+}
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
