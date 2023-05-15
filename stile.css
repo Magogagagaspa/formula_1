@@ -521,13 +521,25 @@ nav{
 
 /*FOOTER*/
 
-footer{text-align: center; font-size: 12px; background-color: #000;}
-footer p{color: #fff;}
+footer{ background-color: rgb(42, 42, 42);margin-top: 100px;bottom: 0px;}
+.footer-container img{ width: auto;height: 20%;margin-left:45%;}
+.footer-container p{text-align:center;font-size: 30px;}
+.footer-container{height: 50vh;width:100%;}
+.footer-container-social{display:flex;width: 10%;height:10%;margin-left:40%;}
+.footer-container-social img{height: 80%; width: auto; margin: 0px 50px 10px 0px;}
 
-.foot{
-    padding-top: 5px;
-    padding-bottom: 20px;
-}
+
+.footer-container-partners{height:80vh;width:100%; background-color: black;margin-bottom: 0px;}
+.footer-container-partners img{height: auto; width: 15%; margin: 0px 20px 5px 0px;}
+.footer-container-partners-it{height:30%;}
+.footer-container-partners p,h4{color:white; text-align: center;}
+li {display: inline;}
+.footer-container-partners ul{display: block;text-align: center;}
+.footer-container-partners-it{border-top: 7px solid rgb(42, 42, 42);;margin-right:10%;border-radius: 5px;}
+
+.footer-copyright{display: flex;margin-bottom: 0px;}
+.footer-copyright h4{margin: 0%;font-size: 20px;margin: auto;margin-bottom:0px;}
+
 
 /*CLASSIFICA*/
 
