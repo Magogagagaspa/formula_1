@@ -1,13 +1,13 @@
 document.write(`   <footer>
 <div class="footer-container"> 
-      <img src="immagini/f11.png" alt="" >
+      <img src="../immagini/f11.png" alt="" >
       
          <div class="footer-container-social">
           
-          <a href="https://twitter.com/f1"><img src="immagini/social/twittter.png" alt="" ></a>
-          <a href="https://www.facebook.com/Formula1/"><img src="immagini/social/facebook.png" alt="" ></a>
-          <a href="https://www.instagram.com/f1/"><img src="immagini/social/instagrammm.png" alt="" ></a>
-          <a href="https://www.youtube.com/user/Formula1"><img src="immagini/social/youtube.png" alt="" ></a>
+          <a href="https://twitter.com/f1"><img src="../immagini/social/twittter.png" alt="" ></a>
+          <a href="https://www.facebook.com/Formula1/"><img src="../immagini/social/facebook.png" alt="" ></a>
+          <a href="https://www.instagram.com/f1/"><img src="../immagini/social/instagrammm.png" alt="" ></a>
+          <a href="https://www.youtube.com/user/Formula1"><img src="../immagini/social/youtube.png" alt="" ></a>
          </div>
       <div class="footer-container-partners">
           <p>I nostri partner</p>
