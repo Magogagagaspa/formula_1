@@ -1,0 +1,3 @@
+
+CREATE DATABASE IF NOT EXISTS `formula_1` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `formula_1`;
