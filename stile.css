@@ -1083,29 +1083,24 @@ input::placeholder{
 
 .modifican{
     position: absolute;
-    right: 390px;
-    top: 130px;
+    right: -200px;
+    top: 5px;
     display: none;
 }
 
 .modificac{
     position: absolute;
-    right: 390px;
-    top: 180px;
+    right: -200px;
+    top: 50px;
     display: none;
 }
 
-.modificae{
-    position: absolute;
-    right: 390px;
-    top: 230px;
-    display: none;
-}
+
 
 .modificap{
     position: absolute;
-    right: 390px;
-    top: 240px;
+    right: -200px;
+    top: 100px;
     display: none;
 }
 
@@ -1138,11 +1133,20 @@ input::placeholder{
 
 #form_img_prf{
     background: lightgrey;
-    width: 280px;
+    width: 50%;
     border-top: solid red 4px;
     border-right: solid red 4px;
     border-radius: 5px;
-    height: 30px;
+    display: flex;
+}
+
+#bottone_img_prf{
+    margin: 0;
+    border: none;
+    background: red;
+    width: 50%;
+    font-family: 'formula1-bold';
+    font-size: 20px;
 }
 
 #input_img_prf{
@@ -1153,6 +1157,8 @@ input::placeholder{
     width: 100%;
     margin: 0 auto;
     height: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 

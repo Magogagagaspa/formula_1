@@ -9,6 +9,78 @@
     if(isset($_SESSION["cognome"])) $cognome = $_SESSION["cognome"];
     if(isset($_SESSION["accesso"])) $accesso = $_SESSION["accesso"]; else $acceso = false;
     if(isset($_SESSION["immagine_profilo"])) $immagine_profilo = $_SESSION["immagine_profilo"];
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_cognome"])  && $_POST["modifica_cognome"] !== "")
+    {                    
+            $connessione = new mysqli("localhost", "root", "", "formula_1");
+
+            $modifica_cognome = $_POST["modifica_cognome"];
+                        
+            $sql1 = "UPDATE utente SET cognome = '$modifica_cognome' WHERE email='" . $email . "'";
+            
+            $ris1 = $connessione->query($sql1);
+            
+            if($ris1)
+            {
+                $_SESSION["cognome"] = $modifica_cognome;
+                echo'<p id="conferma_modifica">Cognome cambiato con successo</p>';
+            }
+            else
+            {
+                echo"errore";
+            }
+            $cognome = $modifica_cognome;
+    }
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_nome"])  && $_POST["modifica_nome"] !== "")
+    {
+        
+
+            $connessione = new mysqli("localhost", "root", "", "formula_1");
+
+            $modifica_nome = $_POST["modifica_nome"];
+                      
+            $sql = "UPDATE utente SET nome = '$modifica_nome' WHERE email='" . $email . "'";
+            
+            $ris = $connessione->query($sql);
+          
+            if($ris)
+            {
+               $_SESSION["nome"] = $modifica_nome;
+               echo'<p id="conferma_modifica">Nome cambiato con successo</p>';
+            //    header("Refresh: 1;");
+            }
+            else
+            {
+               echo"errore";
+            }
+            $nome = $modifica_nome;
+    }
+
+    
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_password"])  && $_POST["modifica_password"] !== "")
+    {                    
+            $connessione = new mysqli("localhost", "root", "", "formula_1");
+
+            $modifica_password = $_POST["modifica_password"];
+                      
+            $sql2 = "UPDATE utente SET password = '$modifica_password' WHERE email='" . $email . "'";
+            
+            $ris2 = $connessione->query($sql2);
+          
+            if($ris2)
+            {
+               $_SESSION["password"] = $modifica_password;
+               echo'<p id="conferma_modifica">password cambiata con successo</p>';
+            }
+            else
+            {
+               echo"errore";
+            }
+            $password = $modifica_password;
+    }
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +122,7 @@
             <?php
                 if(isset($_FILES["immagine_profilo"]) && $_FILES["immagine_profilo"] !== "" && $_SERVER['REQUEST_METHOD'] === 'POST')
                 {
-                    echo'SALAGAy';
+
                     $connessione = new mysqli("localhost", "root", "", "formula_1");
 
                     if($connessione->connect_error){
@@ -86,7 +158,7 @@
                         foreach($ris as $riga)
                         {
                           echo '
-                            <idv class="contenitore_info">
+                            <div class="contenitore_info">
 
                                 <div class="credenziali">
                                     <p>Nome: '.$riga["nome"].'</p>
@@ -103,8 +175,7 @@
                                 </div>
 
                              
-                            </div>
-                            <div class="modifican">
+                            </div><div class="modifican">
                             <form action="'. $_SERVER['PHP_SELF'] .'"  method="post" id="form_modifica">
                                <input type="text" placeholder="Modifica" name="modifica_nome">
                                <input type="submit" value="Conferma modifica" id="bottone_modifica">
@@ -124,74 +195,77 @@
                             <input type="submit" value="Conferma modifica" id="bottone_modifica">
                          </form>
                         </div>
+                        </div>
+        
                             ';  
                             
                         }
 
-                        if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_nome"])  && $_POST["modifica_nome"] !== "")
-                        {
+                        // if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_nome"])  && $_POST["modifica_nome"] !== "")
+                        // {
                             
                     
-                                $connessione = new mysqli("localhost", "root", "", "formula_1");
+                        //         $connessione = new mysqli("localhost", "root", "", "formula_1");
                     
-                                $modifica_nome = $_POST["modifica_nome"];
+                        //         $modifica_nome = $_POST["modifica_nome"];
                                           
-                                $sql = "UPDATE utente SET nome = '$modifica_nome' WHERE email='" . $email . "'";
+                        //         $sql = "UPDATE utente SET nome = '$modifica_nome' WHERE email='" . $email . "'";
                                 
-                                $ris = $connessione->query($sql);
+                        //         $ris = $connessione->query($sql);
                               
-                                if($ris)
-                                {
-                                   $_SESSION["nome"] = $modifica_nome;
-                                   echo'<p id="conferma_modifica">Nome cambiato con successo</p>';
-                                }
-                                else
-                                {
-                                   echo"errore";
-                                }
-                        }
+                        //         if($ris)
+                        //         {
+                        //            $_SESSION["nome"] = $modifica_nome;
+                        //            echo'<p id="conferma_modifica">Nome cambiato con successo</p>';
+                        //         //    header("Refresh: 1;");
+                        //         }
+                        //         else
+                        //         {
+                        //            echo"errore";
+                        //         }
+                        // }
 
-                        if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_cognome"])  && $_POST["modifica_cognome"] !== "")
-                        {                    
-                                $connessione = new mysqli("localhost", "root", "", "formula_1");
+                        // if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_cognome"])  && $_POST["modifica_cognome"] !== "")
+                        // {                    
+                        //         $connessione = new mysqli("localhost", "root", "", "formula_1");
                     
-                                $modifica_cognome = $_POST["modifica_cognome"];
+                        //         $modifica_cognome = $_POST["modifica_cognome"];
                                           
-                                $sql1 = "UPDATE utente SET cognome = '$modifica_cognome' WHERE email='" . $email . "'";
+                        //         $sql1 = "UPDATE utente SET cognome = '$modifica_cognome' WHERE email='" . $email . "'";
                                 
-                                $ris1 = $connessione->query($sql1);
+                        //         $ris1 = $connessione->query($sql1);
                               
-                                if($ris1)
-                                {
-                                   $_SESSION["cognome"] = $modifica_cognome;
-                                   echo'<p id="conferma_modifica">Cognome cambiato con successo</p>';
-                                }
-                                else
-                                {
-                                   echo"errore";
-                                }
-                        }
+                        //         if($ris1)
+                        //         {
+                        //            $_SESSION["cognome"] = $modifica_cognome;
+                        //            echo'<p id="conferma_modifica">Cognome cambiato con successo</p>';
+                        //         }
+                        //         else
+                        //         {
+                        //            echo"errore";
+                        //         }
+                        // }
 
-                        if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_password"])  && $_POST["modifica_password"] !== "")
-                        {                    
-                                $connessione = new mysqli("localhost", "root", "", "formula_1");
+                        // if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_password"])  && $_POST["modifica_password"] !== "")
+                        // {                    
+                        //         $connessione = new mysqli("localhost", "root", "", "formula_1");
                     
-                                $modifica_password = $_POST["modifica_password"];
+                        //         $modifica_password = $_POST["modifica_password"];
                                           
-                                $sql2 = "UPDATE utente SET password = '$modifica_password' WHERE email='" . $email . "'";
+                        //         $sql2 = "UPDATE utente SET password = '$modifica_password' WHERE email='" . $email . "'";
                                 
-                                $ris2 = $connessione->query($sql2);
+                        //         $ris2 = $connessione->query($sql2);
                               
-                                if($ris2)
-                                {
-                                   $_SESSION["password"] = $modifica_password;
-                                   echo'<p id="conferma_modifica">password cambiata con successo</p>';
-                                }
-                                else
-                                {
-                                   echo"errore";
-                                }
-                        }
+                        //         if($ris2)
+                        //         {
+                        //            $_SESSION["password"] = $modifica_password;
+                        //            echo'<p id="conferma_modifica">password cambiata con successo</p>';
+                        //         }
+                        //         else
+                        //         {
+                        //            echo"errore";
+                        //         }
+                        // }
 
                      ?>
             </div>
