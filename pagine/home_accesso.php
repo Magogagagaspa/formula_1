@@ -168,13 +168,7 @@
           </div>
         </menu>
 
-        <footer>
-          <div class="foot">
-            <p>federico.sala01@liceobanfi.eu  -  gasparing.davide@liceobanfi.eu</p>
-            <p>+39 346 6433 325  -  +39 542 2655 886</p>
-            <p>Sala Federico  -  Gasparin Davide</p>
-          </div>
-        </footer>
+        <script src="../script_header_footer/script_footer.js"></script>    
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
