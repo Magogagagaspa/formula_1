@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `utente` (
   `cognome` char(50) DEFAULT NULL,
   `email` char(50) NOT NULL,
   `password` char(50) DEFAULT NULL,
-  `immagine_profilo` Blob NOT NULL,
+  `immagine_profilo` Blob() NOT NULL,
   PRIMARY KEY (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
