@@ -198,82 +198,13 @@
                          </form>
                         </div>
                         </div>
-        
                             ';  
                             
                         }
 
-                        // if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_nome"])  && $_POST["modifica_nome"] !== "")
-                        // {
-                            
-                    
-                        //         $connessione = new mysqli("localhost", "root", "", "formula_1");
-                    
-                        //         $modifica_nome = $_POST["modifica_nome"];
-                                          
-                        //         $sql = "UPDATE utente SET nome = '$modifica_nome' WHERE email='" . $email . "'";
-                                
-                        //         $ris = $connessione->query($sql);
-                              
-                        //         if($ris)
-                        //         {
-                        //            $_SESSION["nome"] = $modifica_nome;
-                        //            echo'<p id="conferma_modifica">Nome cambiato con successo</p>';
-                        //         //    header("Refresh: 1;");
-                        //         }
-                        //         else
-                        //         {
-                        //            echo"errore";
-                        //         }
-                        // }
-
-                        // if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_cognome"])  && $_POST["modifica_cognome"] !== "")
-                        // {                    
-                        //         $connessione = new mysqli("localhost", "root", "", "formula_1");
-                    
-                        //         $modifica_cognome = $_POST["modifica_cognome"];
-                                          
-                        //         $sql1 = "UPDATE utente SET cognome = '$modifica_cognome' WHERE email='" . $email . "'";
-                                
-                        //         $ris1 = $connessione->query($sql1);
-                              
-                        //         if($ris1)
-                        //         {
-                        //            $_SESSION["cognome"] = $modifica_cognome;
-                        //            echo'<p id="conferma_modifica">Cognome cambiato con successo</p>';
-                        //         }
-                        //         else
-                        //         {
-                        //            echo"errore";
-                        //         }
-                        // }
-
-                        // if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modifica_password"])  && $_POST["modifica_password"] !== "")
-                        // {                    
-                        //         $connessione = new mysqli("localhost", "root", "", "formula_1");
-                    
-                        //         $modifica_password = $_POST["modifica_password"];
-                                          
-                        //         $sql2 = "UPDATE utente SET password = '$modifica_password' WHERE email='" . $email . "'";
-                                
-                        //         $ris2 = $connessione->query($sql2);
-                              
-                        //         if($ris2)
-                        //         {
-                        //            $_SESSION["password"] = $modifica_password;
-                        //            echo'<p id="conferma_modifica">password cambiata con successo</p>';
-                        //         }
-                        //         else
-                        //         {
-                        //            echo"errore";
-                        //         }
-                        // }
 
                      ?>
             </div>
-
-                
-
         </div>
 
     </div>
