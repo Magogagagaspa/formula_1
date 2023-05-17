@@ -107,6 +107,7 @@
                         }
                         else
                         {
+                            
                             echo '
                             <img src = "../immagini/iconaomino.png" id="immagineprf">
                             <form action="' .$_SERVER['PHP_SELF'].'" method="post" id="form_img_prf">
@@ -143,6 +144,7 @@
                        echo"errore";
                     }
                 }
+                
             ?>
                     <?php
                         $connessione = new mysqli("localhost", "root", "", "formula_1");
