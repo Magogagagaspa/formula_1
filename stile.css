@@ -1188,11 +1188,43 @@ input::placeholder{
 
 .contenitore_fantasy{
     background: #3f3d3d;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.titolo_fnt{
+    height: 10%;
 }
 
 h1{
     color: black;
     font-family: 'formula1-bold';
+    margin: 15px auto;
+    text-align: center;
+}
+
+.testi_fnt{
+    width: 90%;
+    text-align: center;
+    font-size: 20px;
+    border-right: 15px solid red;
+    border-top: 20px solid red;
+    border-radius: 35px;
+    margin-bottom: 10px;
+    background: whitesmoke;
+}
+
+.testo_iscrizione{
+    margin: 15px auto;
+    color: black;
+    font-family: 'formula1-bold';
+}
+
+.testo_iscrizione a{
+    text-decoration: none;
+    color: red;
 }
 
 /*MEDIA*/
