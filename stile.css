@@ -1184,10 +1184,16 @@ input::placeholder{
     
 .apri{display: block;}
 
-
 /* f1 FANTASY */
 
+.contenitore_fantasy{
+    background: #3f3d3d;
+}
 
+h1{
+    color: black;
+    font-family: 'formula1-bold';
+}
 
 /*MEDIA*/
 @media(max-width:946px){  
