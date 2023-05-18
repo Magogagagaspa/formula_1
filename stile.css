@@ -981,7 +981,10 @@ input{
     height: 30px;
     width: 100%;
     margin-bottom: 30px;
-    border: solid black 3px;
+    border-bottom: solid black 3px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
 }
 
 input::placeholder{
@@ -992,13 +995,20 @@ input::placeholder{
     width: 100%;
     margin-bottom: 30px;
     border-radius: 2px;
-    border: solid black 3px;
+    border-bottom: solid black 3px;
+    border-top: none;
+    border-right: none;
+    border-left: none;  
+
 }
 
 #password{
     width: 100%;
     border-radius: 2px;
-    border: solid black 3px;    
+    border-bottom: solid black 3px;
+    border-top: none;
+    border-right: none;
+    border-left: none;     
     margin-bottom: 30px;
 }
 
@@ -1175,6 +1185,16 @@ input::placeholder{
 .apri{display: block;}
 
 
+/* f1 FANTASY */
+
+.contenitore_fantasy{
+    background: #3f3d3d;
+}
+
+h1{
+    color: black;
+    font-family: 'formula1-bold';
+}
 
 /*MEDIA*/
 @media(max-width:946px){  
