@@ -19,6 +19,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="../stile.css">
       <link rel="icon" type="img/png" href="../immagini/f11.png">
+      <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
       <title>FANTASY</title>
   </head>
 
@@ -42,7 +43,7 @@
 
                 <div class="testi_fnt">
             <h2 id="titoli"> COS'É IL F1 FANTASY</h2>  
-            <p id="text">Il F1 Fantasy è un gioco online basato sulla Formula 1, che consente agli appassionati di vivere un'esperienza simile a quella di un proprietario di una squadra di Formula 1.
+            <p id="text" >Il F1 Fantasy è un gioco online basato sulla Formula 1, che consente agli appassionati di vivere un'esperienza simile a quella di un proprietario di una squadra di Formula 1.
 
                 Nel F1 Fantasy, i partecipanti possono creare la propria squadra selezionando piloti e squadre che competono nel Campionato Mondiale di Formula 1. Ogni pilota e squadra ha un costo virtuale associato, basato sulle prestazioni passate e sulle aspettative per la stagione in corso. Ai partecipanti viene dato un budget virtuale limitato per comporre la squadra, il che richiede una gestione oculata delle risorse disponibili.
             </p>
@@ -57,27 +58,27 @@
             <div class="testo_iscrizione">
                 PER PARTECIPARE AL F1 FANTASY E CREARE LA TUA SQUADRA <a href="accesso.php">ACCEDI</a> AL TUO ACCOUNT E SE NON NE HAI UNO <a href="iscrizione.php">ISCRIVITI</a>
             </div>
-            <div class="contenitore_piloti">
+            <div class="contenitore_piloti" class="reveal">
                 
                 <ul>
-                    <li><img src="../immagini/verstappenpilota.png" alt="" class="fotopilota"></li>
-                    <li><img src="../immagini/perezpilota.png" alt="" class="fotopilota"></li>
-                    <li><img src="../immagini/leclercpilota.png" alt="" class="fotopilota"></li>
-                    <li><img src="../immagini/sainzpilota.png" alt="" class="fotopilota"></li>
-                    <li><img src="../immagini/hamiltonpilota.png" alt="" class="fotopilota"></li>
-                    <li><img src="../immagini/russellpilota.png" alt="" class="fotopilota"></li>
-                    <li><img src="../immagini/piastripilota.png" alt="" class="fotopilota"></li> 
-                    <li><img src="../immagini/oconpilota.png" alt="" class="fotopilota"></li> 
-                    <li><img src="../immagini/bottaspilota.png" alt="" class="fotopilota"></li>  
-                    <li><img src="../immagini/zhoupilota.png" alt="" class="fotopilota"></li>
-                    <li><img src="../immagini/alonsopilota.png" alt="" class="fotopilota"></li>
-                    <li><img src="../immagini/strollpilota.png" alt="" class="fotopilota"></li>
-                    <li><img src="../immagini/kevinpilota.png" alt="" class="fotopilota"></li>
-                    <li><img src="../immagini/hulkenbergpilota.png" alt="" class="fotopilota"></li>
-                    <li><img src="../immagini/yukipilota.png" alt="" class="fotopilota"></li>
-                    <li><img src="../immagini/devriespilota.png" alt="" class="fotopilota"></li>
-                    <li><img src="../immagini/albonpilota.png" alt="" class="fotopilota"></li>
-                    <li><img src="../immagini/sargeantpilota.png" alt="" class="fotopilota"></li>
+                    <li class="reveal"><input type="image" src="../immagini/verstappenpilota.png" alt="" class="fotopilota" type="checkbox"></li>
+                    <li class="reveal"><input type="image" src="../immagini/perezpilota.png" alt="" class="fotopilota" ></li>
+                    <li class="reveal"><input type="image" src="../immagini/leclercpilota.png" alt="" class="fotopilota"></li>
+                    <li class="reveal"><input type="image"src="../immagini/sainzpilota.png" alt="" class="fotopilota"></li>
+                    <li class="reveal"><input type="image" src="../immagini/hamiltonpilota.png" alt="" class="fotopilota"></li>
+                    <li class="reveal"><input type="image" src="../immagini/russellpilota.png" alt="" class="fotopilota"></li>
+                    <li class="reveal"><input type="image" src="../immagini/piastripilota.png" alt="" class="fotopilota"></li> 
+                    <li class="reveal"><input type="image" src="../immagini/oconpilota.png" alt="" class="fotopilota"></li> 
+                    <li class="reveal"><input type="image" src="../immagini/bottaspilota.png" alt="" class="fotopilota"></li>  
+                    <li class="reveal"><input type="image" src="../immagini/zhoupilota.png" alt="" class="fotopilota"></li>
+                    <li class="reveal"><input type="image" src="../immagini/alonsopilota.png" alt="" class="fotopilota"></li>
+                    <li class="reveal"><input type="image" src="../immagini/strollpilota.png" alt="" class="fotopilota"></li>
+                    <li class="reveal"><input type="image" src="../immagini/kevinpilota.png" alt="" class="fotopilota"></li>
+                    <li class="reveal"><input type="image" src="../immagini/hulkenbergpilota.png" alt="" class="fotopilota"></li>
+                    <li class="reveal"><input type="image" src="../immagini/yukipilota.png" alt="" class="fotopilota"></li>
+                    <li class="reveal"><input type="image" src="../immagini/devriespilota.png" alt="" class="fotopilota"></li>
+                    <li class="reveal"><input type="image"src="../immagini/albonpilota.png" alt="" class="fotopilota"></li>
+                    <li class="reveal"><input type="image" src="../immagini/sargeantpilota.png" alt="" class="fotopilota"></li>
             </ul>
 
             </div>
@@ -101,7 +102,19 @@
         });
 
     });
-</script>
+    $(document).ready(function(){
+           
+           $(".contenitore_piloti").click(function(e){
+              
+               $(".contenitore_fantasy").toggleClass('.contenitore_piloti_input');
+               e.preventDefault();
+           });
+       });
+       ScrollReveal().reveal('.reveal', { distance: '50px', duration: 1000, easing: 'cubic-bezier(0.5, 0, 0, 1)' ,interval: 300 });
+        ScrollReveal().reveal('.zoom', {  duration: 1500, easing: 'cubic-bezier(0.5, 0, 0, 1)' ,interval: 200, scale: 0.65});
+    </script>
+
+
 
     </body>
 
