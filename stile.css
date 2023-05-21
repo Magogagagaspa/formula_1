@@ -1229,6 +1229,21 @@ h1{
     text-decoration: none;
     color: red;
 }
+/* .contenitore_piloti{
+   
+
+} */
+.contenitore_piloti ul{display: inline-block;text-align: center;}
+
+.contenitore_piloti img{
+    height:50vh;
+    margin-bottom: 0px;
+    object-fit: contain;
+    width: 17%;
+    margin: 0% 5% 0% 5%;
+    border-radius: 10px;
+    background-color: white;
+}
 
 /*MEDIA*/
 @media(max-width:946px){  

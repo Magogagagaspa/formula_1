@@ -57,7 +57,30 @@
             <div class="testo_iscrizione">
                 PER PARTECIPARE AL F1 FANTASY E CREARE LA TUA SQUADRA <a href="accesso.php">ACCEDI</a> AL TUO ACCOUNT E SE NON NE HAI UNO <a href="iscrizione.php">ISCRIVITI</a>
             </div>
+            <div class="contenitore_piloti">
+                
+                <ul>
+                    <li><img src="../immagini/verstappenpilota.png" alt="" class="fotopilota"></li>
+                    <li><img src="../immagini/perezpilota.png" alt="" class="fotopilota"></li>
+                    <li><img src="../immagini/leclercpilota.png" alt="" class="fotopilota"></li>
+                    <li><img src="../immagini/sainzpilota.png" alt="" class="fotopilota"></li>
+                    <li><img src="../immagini/hamiltonpilota.png" alt="" class="fotopilota"></li>
+                    <li><img src="../immagini/russellpilota.png" alt="" class="fotopilota"></li>
+                    <li><img src="../immagini/piastripilota.png" alt="" class="fotopilota"></li> 
+                    <li><img src="../immagini/oconpilota.png" alt="" class="fotopilota"></li> 
+                    <li><img src="../immagini/bottaspilota.png" alt="" class="fotopilota"></li>  
+                    <li><img src="../immagini/zhoupilota.png" alt="" class="fotopilota"></li>
+                    <li><img src="../immagini/alonsopilota.png" alt="" class="fotopilota"></li>
+                    <li><img src="../immagini/strollpilota.png" alt="" class="fotopilota"></li>
+                    <li><img src="../immagini/kevinpilota.png" alt="" class="fotopilota"></li>
+                    <li><img src="../immagini/hulkenbergpilota.png" alt="" class="fotopilota"></li>
+                    <li><img src="../immagini/yukipilota.png" alt="" class="fotopilota"></li>
+                    <li><img src="../immagini/devriespilota.png" alt="" class="fotopilota"></li>
+                    <li><img src="../immagini/albonpilota.png" alt="" class="fotopilota"></li>
+                    <li><img src="../immagini/sargeantpilota.png" alt="" class="fotopilota"></li>
+            </ul>
 
+            </div>
 
             </div>
             <script src="../script_header_footer/script_footer.js"></script>
