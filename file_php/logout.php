@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    $_SESSION["accesso"] = false;
+    $_SESSION["accesso"] = $accesso = false;
 
     session_destroy();
 

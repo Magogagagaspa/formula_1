@@ -1197,8 +1197,22 @@ input::placeholder{
     justify-content: center;
 }
 
+.contenitore_fantasy_2{
+    background: #3f3d3d;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+}
+
 .titolo_fnt{
     height: 10%;
+}
+
+.titolo_fnt_2{
+    height: 10%;
+    text-align: center  ;
 }
 
 h1{
