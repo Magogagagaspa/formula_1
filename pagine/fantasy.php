@@ -87,10 +87,6 @@
                 }
             }
         ?>
-
-       
-
-
             <form action="" class="contenitore_piloti">
 
                 <table cellspacing="10">
