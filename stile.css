@@ -1243,6 +1243,7 @@ h1{
     text-decoration: none;
     color: red;
 }
+<<<<<<< HEAD
 
 #form_crea{
     width: 100%;
@@ -1375,25 +1376,21 @@ h1{
 }
 /* .contenitore_piloti{
    
+=======
+>>>>>>> 2b26877fa3e8323284ddff0dd17f4ea69659dc77
 
-} */
-.contenitore_piloti ul{display: inline-block;;}
-
-.contenitore_piloti input{
-    height:50vh;
-    margin-bottom: 0px;
-    object-fit: contain;
-    width: 15%;
-    margin: 0% 5% 0% 5%;
-    border-radius: 10px;
-    background-color: white;
-}
-.contenitore_piloti_input input{
-    border-color: red;
-    border-radius: 10px;
-}
+.contenitore_piloti table{height: 90%;width: 90%;margin: auto;}
+.contenitore_piloti{height: 60vh;width: 100%;}
+.contenitore_piloti th{text-align: center;color: rgb(255, 254, 254);font-size: 30px;font-family: "formula1-bold";}
+.contenitore_piloti td{background-color:#ffeded;height: 100%;width: 20%;border-radius: 10px;}
 
 
+.contenitore_piloti_tab table{text-align: center;display: block;}
+.contenitore_piloti_tab{height:250vh;width: 100%;}
+.contenitore_piloti_tab td{height: 100%;width: 20%;}
+.contenitore_piloti_tab img{object-fit: contain;width: 40%;height: 100%;}
+#albon {height: 50%;width: 20%;}
+#sargeant {height: 50%;width: 20%;}
 /*MEDIA*/
 @media(max-width:946px){  
     /*TEMAS*/     

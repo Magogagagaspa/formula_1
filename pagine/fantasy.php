@@ -229,35 +229,85 @@
               
             }
         ?>
+            <form action="" class="contenitore_piloti">
 
-       
+                <table cellspacing="10">
+                    <th colspan="5">Crea la tua squadra:</th>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+            <form action="" class="contenitore_piloti_tab">
+                <table>
+                <tr>
+                    <td><img src="../immagini/verstappenpilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/perezpilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/leclercpilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/devriespilota.png" alt="" class="fotopilota"></td>
 
-
-            
-                <!-- <div class="contenitore_piloti" class="reveal">
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td><img src="../immagini/sainzpilota.png" alt="" ></td>
+                    <td><img src="../immagini/hamiltonpilota.png" alt="" ></td>
+                    <td><img src="../immagini/russellpilota.png" alt="" ></td>
+                    <td><img src="../immagini/piastripilota.png" alt="" ></td>
                     
-                    <ul>
-                        <li class="reveal"><input type="image" src="../immagini/verstappenpilota.png" alt="" class="fotopilota" type="checkbox"></li>
-                        <li class="reveal"><input type="image" src="../immagini/perezpilota.png" alt="" class="fotopilota" ></li>
-                        <li class="reveal"><input type="image" src="../immagini/leclercpilota.png" alt="" class="fotopilota"></li>
-                        <li class="reveal"><input type="image"src="../immagini/sainzpilota.png" alt="" class="fotopilota"></li>
-                        <li class="reveal"><input type="image" src="../immagini/hamiltonpilota.png" alt="" class="fotopilota"></li>
-                        <li class="reveal"><input type="image" src="../immagini/russellpilota.png" alt="" class="fotopilota"></li>
-                        <li class="reveal"><input type="image" src="../immagini/piastripilota.png" alt="" class="fotopilota"></li> 
-                        <li class="reveal"><input type="image" src="../immagini/oconpilota.png" alt="" class="fotopilota"></li> 
-                        <li class="reveal"><input type="image" src="../immagini/bottaspilota.png" alt="" class="fotopilota"></li>  
-                        <li class="reveal"><input type="image" src="../immagini/zhoupilota.png" alt="" class="fotopilota"></li>
-                        <li class="reveal"><input type="image" src="../immagini/alonsopilota.png" alt="" class="fotopilota"></li>
-                        <li class="reveal"><input type="image" src="../immagini/strollpilota.png" alt="" class="fotopilota"></li>
-                        <li class="reveal"><input type="image" src="../immagini/kevinpilota.png" alt="" class="fotopilota"></li>
-                        <li class="reveal"><input type="image" src="../immagini/hulkenbergpilota.png" alt="" class="fotopilota"></li>
-                        <li class="reveal"><input type="image" src="../immagini/yukipilota.png" alt="" class="fotopilota"></li>
-                        <li class="reveal"><input type="image" src="../immagini/devriespilota.png" alt="" class="fotopilota"></li>
-                        <li class="reveal"><input type="image"src="../immagini/albonpilota.png" alt="" class="fotopilota"></li>
-                        <li class="reveal"><input type="image" src="../immagini/sargeantpilota.png" alt="" class="fotopilota"></li>
-                </ul>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"  checked></td>
+                    <td><input type="checkbox" ></td>
+                    <td><input type="checkbox" ></td>
+                    <td><input type="checkbox" ></td>
+                </tr>
+                <tr>
+                    <td><img src="../immagini/oconpilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/bottaspilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/zhoupilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/alonsopilota.png" alt="" class="fotopilota"></td>
+                    
+                    
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td><img src="../immagini/strollpilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/kevinpilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/hulkenbergpilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/yukipilota.png" alt="" class="fotopilota"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><img src="../immagini/albonpilota.png" alt="" class="fotopilota" id="albon"></td>
+                    <td colspan="2"><img src="../immagini/sargeantpilota.png" alt="" class="fotopilota" id="sargeant"> </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="checkbox"></td>
+                    <td colspan="2"><input type="checkbox"></td>
+                    
+                </tr>
+                </table>
+            </form>
 
-                </div> -->
 
             </div>
             <script src="../script_header_footer/script_footer.js"></script>
