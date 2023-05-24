@@ -1243,6 +1243,136 @@ h1{
     text-decoration: none;
     color: red;
 }
+
+#form_crea{
+    width: 100%;
+    display: flex;
+    font-family: 'formula1-regular';
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+    border-top: solid red 15px;
+    border-right: solid red 15px;
+    border-radius: 20px;
+    padding: 5px;
+    flex-direction: column;
+}
+
+.fotopilotaform{
+    width: 110px;
+    margin: 0 auto;
+}
+
+#input_crea{
+    width: 15%;
+    margin: 0 auto;
+
+}
+
+#label_crea{
+    margin: 0 auto;
+}
+
+.contieni_label{
+    display: flex;
+
+    align-items: flex-end;
+}
+
+.contenitore_crea{
+    background: #3f3d3d;    
+}
+.contieni_input{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#label_crea{
+    background: #3f3d3d;
+    width: 100%;
+  
+}
+
+#titolino{
+    text-align: center;
+    font-family: 'formula1-bold';
+}
+
+#tit_sq{
+    text-align: center;
+    font-family: 'formula1-bold';
+    color: red;
+    margin-left: 8px;
+}
+
+.contieni_titolof{
+    display: flex;
+    justify-content: center;
+}
+
+.contieni_input_piloti{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+#bottone_fantasy{
+    width: 30%;
+    text-align: center;
+    height: 50px;
+    border: solid black 2px;
+    border-radius: 2px;
+    background: whitesmoke;
+    font-family: 'formula1-regular';
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+#bottone_fantasy:hover{
+    background: red;
+    transition: 0.5s;
+    opacity: 1;
+    transform: scale(1.1);
+    font-size: 17px;
+}
+
+#label_sq{
+    width: 30%;
+    background: black;
+    text-align: center;
+    border-top: solid red 5px;
+    border-right: solid red 5px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 10px;
+    height: 40px;
+}
+
+#nome_sq{
+    width: 30%;     
+    border-bottom: solid red 5px;
+    border-left: solid red 5px;
+    border-radius: 10px;
+    color: white;
+    background: black;
+    margin-bottom: 30px;
+
+}
+
+#bottone_crea{
+    width: 30%;     
+    border-bottom: solid red 5px;
+    border-left: solid red 5px;
+    border-radius: 10px;
+    font-family: 'formula1-bold';
+    color: white;
+    background: black;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
 /* .contenitore_piloti{
    
 
@@ -1262,6 +1392,7 @@ h1{
     border-color: red;
     border-radius: 10px;
 }
+
 
 /*MEDIA*/
 @media(max-width:946px){  
