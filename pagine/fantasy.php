@@ -222,14 +222,14 @@
                     if(isset($_POST['pilota']) && COUNT($_POST['pilota']) === 5)
                     {
                         $squadra = $_POST['pilota'];
-                        $nome_squadra= $_POST["nome_squadra"];
+                        $nome_squadra = $_POST["nome_squadra"];
                         header("Refresh 0.5; URL=squadra.php");
                     } 
                 }     
               
             }
         ?>
-            <form action="" class="contenitore_piloti">
+            <!-- <form action="" class="contenitore_piloti">
 
                 <table cellspacing="10">
                     <th colspan="5">Crea la tua squadra:</th>
@@ -306,7 +306,7 @@
                     
                 </tr>
                 </table>
-            </form>
+            </form> -->
 
 
             </div>
@@ -328,14 +328,7 @@
         });
 
     });
-    $(document).ready(function(){
-           
-           $(".contenitore_piloti").click(function(e){
-              
-               $(".contenitore_fantasy").toggleClass('.contenitore_piloti_input');
-               e.preventDefault();
-           });
-       });
+
        ScrollReveal().reveal('.reveal', { distance: '50px', duration: 1000, easing: 'cubic-bezier(0.5, 0, 0, 1)' ,interval: 300 });
         ScrollReveal().reveal('.zoom', {  duration: 1500, easing: 'cubic-bezier(0.5, 0, 0, 1)' ,interval: 200, scale: 0.65});
     </script>

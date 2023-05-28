@@ -524,12 +524,15 @@ nav{
 
 /*FOOTER*/
 
-footer{ background-color: rgb(42, 42, 42);margin-top: 100px;bottom: 0px;}
-.footer-container img{ width: auto;height: 20%;margin-left:45%;}
+footer{ background-color: rgb(42, 42, 42);}
+.footer-container{height: 30vh;width:100%;}
+.footer-container img{ width: auto;height: 20%;margin: auto;}
 .footer-container p{text-align:center;font-size: 30px;}
-.footer-container{height: 50vh;width:100%;}
-.footer-container-social{display:flex;width: 10%;height:10%;margin-left:40%;}
-.footer-container-social img{height: 80%; width: auto; margin: 0px 50px 10px 0px;}
+
+.footer-container-social{display:flex;height:10%;width: 30%;margin: auto;}
+
+.footer-container-social a {margin-left: 10%;}
+.footer-container-social img{height: 80%; width:100%; }
 
 
 .footer-container-partners{height:80vh;width:100%; background-color: black;margin-bottom: 0px;}
@@ -922,7 +925,7 @@ li {display: inline;}
 }
 
 .logoaccesso {
-    height: 200px;
+    height: 100px;
     width: 100%;
 }
 
@@ -1243,7 +1246,6 @@ h1{
     text-decoration: none;
     color: red;
 }
-<<<<<<< HEAD
 
 #form_crea{
     width: 100%;
@@ -1376,8 +1378,6 @@ h1{
 }
 /* .contenitore_piloti{
    
-=======
->>>>>>> 2b26877fa3e8323284ddff0dd17f4ea69659dc77
 
 .contenitore_piloti table{height: 90%;width: 90%;margin: auto;}
 .contenitore_piloti{height: 60vh;width: 100%;}
