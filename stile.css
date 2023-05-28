@@ -828,9 +828,9 @@ li {display: inline;}
 .pilota2{display: flex;}
 .fotopilota{width: 25%; margin: auto 0px;}
 .fotopilota img{ width: 90%; height: auto ;margin-left: 15px; display: block;}  
-.casco{width: 20%;margin: auto 0px;}
+.casco{width: 20%;margin: auto ;}
 .casco img{width: 90%; height: auto;}
-.numero{width: 23%; margin: auto 0px; padding-left: 10px;}
+.numero{width: 23%; margin: auto ; }
 .numero img{width: 80%; height: auto;}
 
 .pilota h1{
@@ -1404,6 +1404,7 @@ h1{
     .squadra{width: 100%; text-align: center;}
     .macchina{width: 100%; height: auto; display: flex; align-items: center;}
     .macchina img{height: 100%; width: 100%;} 
+    
 }
 
 @media(max-width:1400px){
@@ -1438,10 +1439,10 @@ h1{
     .contenitore_pilota{width: 100%; text-align: center;}
     .pilota h1{font-size: 20px; width: 100%; text-align: center; padding: 0px; margin-left: 0px;}
     .pilota p{font-size: 15px; text-align: center; margin-left: 0px; padding: 0px;}  
-    .casco{margin: auto; width: 25%; height: auto; display: flex; align-items: center; padding: 10px 0px 10px 0px;}
-    .casco img{height: 100%; width: 130px;}
-    .numero{margin: auto; width: 25%; height: auto; display: flex; align-items: center; padding: 10px 0px 10px 0px; }
-    .numero img{height: 100%; width: 130px;}
+    .casco{ width: 25%; height: auto; display: flex; align-items: center; }
+    .casco img{object-fit: contain;height: 90%;width: 90%;}
+    .numero{ width: 25%; height: auto; display: flex; align-items: center; }
+    .numero img{ width: 100%;height: 100%;}
 }
 
 @media (max-width:1392px){
