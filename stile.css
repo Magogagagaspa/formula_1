@@ -1243,7 +1243,6 @@ h1{
     text-decoration: none;
     color: red;
 }
-<<<<<<< HEAD
 
 #form_crea{
     width: 100%;
@@ -1259,9 +1258,13 @@ h1{
     flex-direction: column;
 }
 
-.fotopilotaform{
-    width: 110px;
+.contieni_immaginef{
+    width: 125px;
     margin: 0 auto;
+}
+
+.contieni_immaginef img{
+    width: 100%;
 }
 
 #input_crea{
@@ -1284,10 +1287,11 @@ h1{
     background: #3f3d3d;    
 }
 .contieni_input{
-    width: 30%;
+    width: 25%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    height: 200px;
 }
 
 #label_crea{
@@ -1317,8 +1321,10 @@ h1{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%%;
 
 }
+
 
 #bottone_fantasy{
     width: 30%;
@@ -1376,8 +1382,6 @@ h1{
 }
 /* .contenitore_piloti{
    
-=======
->>>>>>> 2b26877fa3e8323284ddff0dd17f4ea69659dc77
 
 .contenitore_piloti table{height: 90%;width: 90%;margin: auto;}
 .contenitore_piloti{height: 60vh;width: 100%;}

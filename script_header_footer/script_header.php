@@ -1,27 +1,22 @@
 <?php
-    echo <<<EOD
-    <header>
-    <div class="fotomenu">
-    EOD;
-
+echo <<<EOD
+<header>
+<div class="fotomenu">
+EOD;
     $accesso = false; // Valore predefinito
-
     if(isset($_SESSION["accesso"])) {
         $accesso = $_SESSION["accesso"];
     }
-
     if($accesso == true)
     {
-      echo'  <a href="home_accesso.php"><img id="f1logo" src="../immagini/f1logo.png"></a>';
+      echo'<a href="home_accesso.php"><img id="f1logo" src="../immagini/f1logo.png"></a>';
     }
     else
     {
-      echo' <a href="../home.php"><img id="f1logo" src="../immagini/f1logo.png"></a>';
+      echo'<a href="../home.php"><img id="f1logo" src="../immagini/f1logo.png"></a>';
     }
-      
-     echo <<<EOD
+echo'
     </div>
-    
     <a href=""><div class="icon_bar">
            <span></span>
            <span></span>
@@ -133,5 +128,5 @@
         <a href="https://www.fia.com/"><img id="fialogo" src= "../immagini/fialogo.png"></a>
        </div>
     </header>
-    EOD;
+    ';
 ?>
