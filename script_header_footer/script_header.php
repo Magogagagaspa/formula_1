@@ -1,4 +1,5 @@
 <?php
+if(isset($_SESSION["nome_squadra"])) $nome_squadra = $_SESSION["nome_squadra"]; else $nome_squadra = "";
 echo <<<EOD
 <header>
 <div class="fotomenu">
@@ -15,7 +16,7 @@ EOD;
     {
       echo'<a href="../home.php"><img id="f1logo" src="../immagini/f1logo.png"></a>';
     }
-echo'
+    echo'
     </div>
     <a href=""><div class="icon_bar">
            <span></span>
@@ -120,7 +121,19 @@ echo'
             <button class="dropbtn" id="stg"><a href="stagionipassate.php">STAGIONI</a></button>
           </div>
           <div class="dropdown">
-                <button class="dropbtn"><a href="fantasy.php">FANTASY</a></button>
+        
+          ';
+          $sql = "SELECT nome_sq FROM squadra JOIN utente ON utente.email = squadra.email_utente WHERE utente.email = '" .$email. "'";
+          $ris = $connessione->query($sql);
+          if($ris->num_rows > 0)
+          {
+            echo '<button class="dropbtn"><a href="squadra.php">FANTASY</a></button>';
+          }
+          else
+          {
+            echo' <button class="dropbtn"><a href="fantasy.php">FANTASY</a></button>';
+          }   
+          echo '
               </div>
          </nav>
         </div> 

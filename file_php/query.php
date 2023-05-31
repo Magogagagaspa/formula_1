@@ -8,8 +8,6 @@ if($ris2->num_rows > 0){
         $infoPiloti[] = $row;
     }
 }
-
-
 $_SESSION['piloti'] = $infoPiloti;
 
 ?>

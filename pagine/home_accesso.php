@@ -10,8 +10,7 @@
     }
 
       if(isset($_SESSION["accesso"])) {$accesso = $_SESSION["accesso"];} else{$acceso = false;}
-
-    
+      if(isset($_SESSION["nome_squadra"])) {$nome_squadra = $_SESSION["nome_squadra"];} else{$nome_squadra = "";}
 ?>
 
 <!DOCTYPE html>
