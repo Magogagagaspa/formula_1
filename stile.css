@@ -525,17 +525,19 @@ nav{
 /*FOOTER*/
 
 footer{ background-color: rgb(42, 42, 42);}
-.footer-container{height: 30vh;width:100%;}
-.footer-container img{ width: auto;height: 20%;margin: auto;}
+.footer-container{height: 50vh;width:100%;}
 .footer-container p{text-align:center;font-size: 30px;}
 
-.footer-container-social{display:flex;height:10%;width: 30%;margin: auto;}
 
-.footer-container-social a {margin-left: 10%;}
-.footer-container-social img{height: 80%; width:100%; }
+.footer-container-img{width: 10%;margin: auto;}
+.footer-container-img img{width: 100%;height: auto;}
+
+.footer-container-social{display:flex;width: 40%;height: 10%;margin: auto;}
+.footer-container-social img{height: 100%; width: 100%; object-fit: contain;}
+.footer-container-social a {margin-left: 5%;margin-right: auto;}
 
 
-.footer-container-partners{height:80vh;width:100%; background-color: black;margin-bottom: 0px;}
+.footer-container-partners{height:50vh;width:100%; background-color: black;margin-bottom: 0px;}
 .footer-container-partners img{height: auto; width: 10%; margin: 0px 20px 5px 0px;}
 .footer-container-partners-it{height:30%;}
 .footer-container-partners p,h4{color:white; text-align: center;}
@@ -544,7 +546,7 @@ li {display: inline;}
 .footer-container-partners-it{border-top: 7px solid rgb(42, 42, 42);;margin-right:10%;border-radius: 5px;}
 
 .footer-copyright{display: flex;margin-bottom: 0px;}
-.footer-copyright h4{margin: 0%;font-size: 20px;margin: auto;margin-bottom:0px;}
+.footer-copyright h4{margin: 0%;font-size: 10px;margin: auto;margin-bottom:0px;}
 
 
 /*CLASSIFICA*/
@@ -1324,7 +1326,7 @@ h1{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%%;
+    width: 100%;
 
 }
 
@@ -1411,6 +1413,7 @@ h1{
     .squadra{width: 100%; text-align: center;}
     .macchina{width: 100%; height: auto; display: flex; align-items: center;}
     .macchina img{height: 100%; width: 100%;} 
+
     
 }
 
@@ -1438,6 +1441,9 @@ h1{
     .squadra p{font-size: 10px; text-align: center; margin-left: 0px; padding: 0px;}    
     .macchina{width: 100%; height: 50%; padding: 10px 5px 0px 5px;}
     .macchina img{margin: auto;}
+    .footer-container-partners img{width: 20%; }
+    .footer-container-partners{height:60vh;}
+
 
     /*PILOTI*/
     .pilota2{position: relative; margin: auto;}

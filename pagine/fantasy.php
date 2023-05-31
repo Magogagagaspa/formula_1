@@ -111,7 +111,6 @@
                      </div>
                      </div>
                     ';
-<<<<<<< HEAD
                         if(isset($_POST["pilota"]) && isset($_POST["nome_squadra"]))
                         {
                             $nome_squadra = $_POST["nome_squadra"];
@@ -136,13 +135,6 @@
                             $_SESSION["nome_squadra"] = $nome_squadra;
                             header("Refresh 0.5; URL=squadra.php");
                         }
-=======
-                    if(isset($_POST['pilota']) && COUNT($_POST['pilota']) === 5)
-                    {
-                        $squadra = $_POST['pilota'];
-                        $nome_squadra = $_POST["nome_squadra"];
-                        header("Refresh 0.5; URL=squadra.php");
->>>>>>> 5e2fe642e4b8962913ae9485abd9262cda11f9a5
                     } 
                         }
                      
@@ -152,8 +144,8 @@
               
             
 ?>
-<script src="../script_header_footer/script_footer.js"></script>
-            }
+
+            
         ?>
             <!-- <form action="" class="contenitore_piloti">
 
