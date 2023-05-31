@@ -117,7 +117,18 @@
             <button class="dropbtn" id="stg"><a href="stagionipassate.php">STAGIONI</a></button>
           </div>
           <div class="dropdown">
-          <button class="dropbtn"><a href="fantasy.php">FANTASY</a></button>
+EOD;
+$sql = "SELECT nome_sq FROM squadra JOIN utente ON utente.email = squadra.email_utente WHERE utente.email = '" .$email. "'";
+$ris = $connessione->query($sql);
+if($ris->num_rows > 0)
+{
+  echo '<button class="dropbtn"><a href="squadra.php">FANTASY</a></button>';
+}
+else
+{
+  echo' <button class="dropbtn"><a href="fantasy.php">FANTASY</a></button>';
+}   
+echo <<<EOD
         </div>
          </nav>
        

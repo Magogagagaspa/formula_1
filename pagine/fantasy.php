@@ -110,7 +110,7 @@
                     </form>   
                      </div>
                      </div>
-                    ';
+                    
                         if(isset($_POST["pilota"]) && isset($_POST["nome_squadra"]))
                         {
                             $nome_squadra = $_POST["nome_squadra"];
