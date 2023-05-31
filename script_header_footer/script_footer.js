@@ -1,8 +1,9 @@
 document.write(`   <footer>
 <div class="footer-container"> 
-      <div class="footer_conatiner_img">
-        <img src="../immagini/f11.png" alt="" >
-        </div>
+
+            <div class="footer-container-img">
+            <img src="immagini/f11.png" alt="" >
+            </div>
 
 
       
