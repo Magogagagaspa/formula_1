@@ -247,7 +247,9 @@
 
         <footer>
         <div class="footer-container"> 
-      <img src="immagini/f11.png" alt="" >
+          <div class="footer-container-img">
+            <img src="immagini/f11.png" alt="" >
+          </div>
       
          <div class="footer-container-social">
           

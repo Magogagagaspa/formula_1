@@ -110,70 +110,127 @@
                     </form>   
                      </div>
                      </div>
-                    ';
-                   
-                    $pilotiSelezionati = array();
-                    for ($i=0; $i < 20; $i++) { 
-                        if(isset($_POST["pilota"][$i]))
-                        {                           
-                            $pilotiSelezionati[] = $_POST["pilota"][$i];
-                            
-                        }
-                    }
-                if(count($pilotiSelezionati) === 5)
-                {
-                    if(isset($_POST["pilota"]) && isset($_POST["nome_squadra"]) )
-                    {    
-                        $pilot = array();
-                        foreach($_POST["pilota"] as $indice => $valore)
+                    
+                        if(isset($_POST["pilota"]) && isset($_POST["nome_squadra"]))
                         {
-                         $pilot[] = $infoPiloti[$indice]["cod_pilota"];
-                        }
-                        $nome_squadra= $_POST["nome_squadra"];               
+                            $nome_squadra = $_POST["nome_squadra"];
+                           $pilot = array();
+                           foreach($_POST["pilota"] as $indice => $valore)
+                           {
+                            $pilot[] = $infoPiloti[$indice]["cod_pilota"];
+                           }
+                               
+                        if(count($pilot) === 5)
+                        {
                         $mysql = "INSERT INTO squadra (nome_sq, pilota1, pilota2, pilota3, pilota4, pilota5, email_utente)
                         VALUES ('$nome_squadra', '$pilot[0]', '$pilot[1]', '$pilot[2]', '$pilot[3]', '$pilot[4]', '$email')
                         ";
-                                
+                        
                         if($connessione->query($mysql) === true)
                         {
                             
+                            $squadra = $_POST['pilota'];
+                            $_SESSION['squadra'] = $squadra;
+                            $nome_squadra= $_POST["nome_squadra"];
                             $_SESSION["nome_squadra"] = $nome_squadra;
-
-                            $mysql3 = "SELECT cod_sq FROM squadra WHERE email_utente = '$email'";
-
-                            $ris2 = $connessione->query($mysql3);
-
-                            $row = $ris2->fetch_assoc();
-
-                            $cod_squadra = $row['cod_sq'];
-
-
-                            for ($i=0; $i < 5; $i++) 
-                            { 
-                                $sql2="INSERT INTO appartiene (cod_squadra, cod_pilota)
-                                VALUES ('$cod_squadra', '$pilot[$i]')";
-                                $ris4 = $connessione->query($sql2);
-                            }
-                   }
-                          echo'
-                          <script>
-                             window.location.href = "squadra.php";
-                          </script>';
+                            header("Refresh 0.5; URL=squadra.php");
+                        }
+                    } 
+                        }
+                     
+                    
                   
-                }                    
-            }     
-            else
-            {
-                echo'<div class="mess_errore"> Devi selezionare cinque piloti </div>';
-            }
-         }  
-           
+                }     
+              
+            
 ?>
 
+            
+        ?>
+            <!-- <form action="" class="contenitore_piloti">
 
-<script src="../script_header_footer/script_footer.js"></script>
+                <table cellspacing="10">
+                    <th colspan="5">Crea la tua squadra:</th>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+            <form action="" class="contenitore_piloti_tab">
+                <table>
+                <tr>
+                    <td><img src="../immagini/verstappenpilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/perezpilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/leclercpilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/devriespilota.png" alt="" class="fotopilota"></td>
+
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td><img src="../immagini/sainzpilota.png" alt="" ></td>
+                    <td><img src="../immagini/hamiltonpilota.png" alt="" ></td>
+                    <td><img src="../immagini/russellpilota.png" alt="" ></td>
+                    <td><img src="../immagini/piastripilota.png" alt="" ></td>
+                    
+                </tr>
+                <tr>
+                    <td><input type="checkbox"  checked></td>
+                    <td><input type="checkbox" ></td>
+                    <td><input type="checkbox" ></td>
+                    <td><input type="checkbox" ></td>
+                </tr>
+                <tr>
+                    <td><img src="../immagini/oconpilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/bottaspilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/zhoupilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/alonsopilota.png" alt="" class="fotopilota"></td>
+                    
+                    
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td><img src="../immagini/strollpilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/kevinpilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/hulkenbergpilota.png" alt="" class="fotopilota"></td>
+                    <td><img src="../immagini/yukipilota.png" alt="" class="fotopilota"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><img src="../immagini/albonpilota.png" alt="" class="fotopilota" id="albon"></td>
+                    <td colspan="2"><img src="../immagini/sargeantpilota.png" alt="" class="fotopilota" id="sargeant"> </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="checkbox"></td>
+                    <td colspan="2"><input type="checkbox"></td>
+                    
+                </tr>
+                </table>
+            </form> -->
 
 
+            </div>
+            <script src="../script_header_footer/script_footer.js"></script>
+
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
@@ -189,7 +246,12 @@
         });
 
     });
-</script>
+
+       ScrollReveal().reveal('.reveal', { distance: '50px', duration: 1000, easing: 'cubic-bezier(0.5, 0, 0, 1)' ,interval: 300 });
+        ScrollReveal().reveal('.zoom', {  duration: 1500, easing: 'cubic-bezier(0.5, 0, 0, 1)' ,interval: 200, scale: 0.65});
+    </script>
+
+
 
     </body>
 
