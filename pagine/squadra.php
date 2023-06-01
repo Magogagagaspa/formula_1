@@ -6,7 +6,7 @@
     if(isset($_SESSION["email"])) $email = $_SESSION["email"];
     if(isset($_SESSION["nome_squadra"])) $nome_squadra = $_SESSION["nome_squadra"];
     if(isset($_SESSION["accesso"])) {$accesso = $_SESSION["accesso"];} else{$acceso = false;}
-    if(isset($_SESSION["piloti"])) $pilot = $_SESSION["piloti"];
+    if(isset($_SESSION["pilota"])) $pilotiSelezionati = $_SESSION["pilota"];
 
   
 ?>
@@ -61,7 +61,8 @@
                    
                     while($row = $ris2->fetch_assoc())
                     {
-                       $infop[] = $row;
+                       $pilotiSelezionati = $row; 
+                       $infop[] = $pilotiSelezionati;
                     }
                 }
                 require_once("../file_php/query.php");
