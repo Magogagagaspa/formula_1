@@ -43,7 +43,7 @@
             <input type="password" placeholder="Inserisci Password" name="password" id="password"  required>
             <label for="conferma">Conferma password</label>
             <input type="password" placeholder="Conferma password" name="conferma" id="password"  required>
-            <input type="submit" value="Accedi" id="bottone_dati">
+            <input type="submit" value="ISCRIVITI" id="bottone_dati">
         </form>
     </div>
   
@@ -71,7 +71,7 @@
 
                  $myquery = "SELECT email
 						    FROM utente 
-						    WHERE email='" . $email . "'";
+						    WHERE email=' $email '";
 
                     $ris = $connessione->query($myquery);
 
