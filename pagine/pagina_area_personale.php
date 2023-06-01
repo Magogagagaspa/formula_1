@@ -23,7 +23,7 @@
             if($ris1)
             {
                 $_SESSION["cognome"] = $modifica_cognome;
-                echo'<p id="conferma_modifica">Cognome cambiato con successo</p>';
+                
             }
             else
             {
@@ -47,7 +47,7 @@
             if($ris)
             {
                $_SESSION["nome"] = $modifica_nome;
-               echo'<p id="conferma_modifica">Nome cambiato con successo</p>';
+              
             //    header("Refresh: 1;");
             }
             else
@@ -71,7 +71,7 @@
             if($ris2)
             {
                $_SESSION["password"] = $modifica_password;
-               echo'<p id="conferma_modifica">password cambiata con successo</p>';
+
             }
             else
             {
@@ -130,19 +130,15 @@
                       die("<p>Connessione al server non riuscita: ".$connessione->connect_error."</p>");
                     }
 
-                    $sql = "UPDATE utente SET immagine_profilo = '$immagine_profilo' WHERE email='" . $email . "'";
+                    $nomeFile = $_FILES['nome_input_file']['name'];
+                    $percorsoTemporaneo = $_FILES['nome_input_file']['tmp_name']; 
+                    $destinazione = '../immagini/immagni_profilo/' . $nomeFile;
 
-                    $ris = $connessione->query($sql) or die("<p>Query fallita!</p>");
+                    move_uploaded_file($percorsoTemporaneo, $destinazione);
 
-                    if($ris)
-                    {
-                       $_FILES["immagine_profilo"] = $immagine_profilo;
-                       echo'<p id="conferma_modifica">Immagine profilo cambiata con successo</p>';
-                    }
-                    else
-                    {
-                       echo"errore";
-                    }
+                    $sqlimg = "INSERT INTO utente (immagine_profilo)
+                    VALUES ('$destinazione') WHERE email = '$email'";
+
                 }
                 
             ?>

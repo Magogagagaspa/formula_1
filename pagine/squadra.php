@@ -8,7 +8,13 @@
     if(isset($_SESSION["accesso"])) {$accesso = $_SESSION["accesso"];} else{$acceso = false;}
     if(isset($_SESSION["pilota"])) $pilotiSelezionati = $_SESSION["pilota"];
 
-  
+     if(isset($_POST["modifica_nome_sq"]) AND $_POST["modifica_nome_sq"] !== "")
+                {
+                    $nome_squadram = $_POST["modifica_nome_sq"];
+
+                    $sqlnome = "UPDATE squadra SET nome_sq = '$nome_squadram' WHERE email_utente = '$email'";
+                    $risotto = $connessione->query($sqlnome);
+                }
 ?>
 
 <!DOCTYPE html>
@@ -44,9 +50,17 @@
 
                 echo '
                     <h1 id="titolazzone"> LA TUA SQUADRA </h1>
-                    <h2 id="titolosquadraf"> '.$row["nome_sq"].' </h2>    
-                        <div class="contieni_squadraf">
+                   <div class="contieni_riga_titolo"> <h2 id="titolosquadraf"> '.$row["nome_sq"].' </h2> <div class="bottone_modifica_squadra">MODIFICA</div></div>    
+                   <div class="contieni_form_squadra">
+                   <form action="'. $_SERVER['PHP_SELF'] .'"  method="post" id="form_modifica">
+                   <input type="text" placeholder="Modifica" name="modifica_nome_sq">
+                   <input type="submit" value="Conferma modifica" id="bottone_modifica_sq">
+                    </form>
+                    </div>
+                   <div class="contieni_squadraf">
                 ';
+
+             
 
                 $sql = "SELECT nome, cognome, foto, piloti.cod_pilota, team FROM piloti 
                 JOIN appartiene ON appartiene.cod_pilota = piloti.cod_pilota
@@ -104,6 +118,22 @@
         $(".icon_bar").click(function(e){
 
             $(".menu").toggleClass('is-open');
+            
+              
+
+            e.preventDefault();
+
+        });
+
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+
+        $(".bottone_modifica_squadra").click(function(e){
+
+            $(".contieni_form_squadra").toggleClass('is-open');
             
               
 
