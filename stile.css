@@ -928,7 +928,7 @@ li {display: inline;}
 
 .logoaccesso {
     height: 100px;
-    width: 100%;
+    margin: auto;
 }
 
 
@@ -964,18 +964,26 @@ li {display: inline;}
     margin: 0px 15px;
 }
 
+.contenitore_form{
+    width: 100%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
 #formaccesso{
-    width: 600px;
+    width: 60%;
     display: flex;
     font-family: 'formula1-regular';
     flex-direction: column;
     flex-wrap: wrap;
     margin: auto;
+    margin-top:10vh;
+    margin-bottom: 10vh;
     align-items: center;
     border-top: solid red 15px;
     border-right: solid red 15px;
     border-radius: 20px;
     padding: 5px;
+    box-shadow: 5px 5px 5px grey;
 }
 
 
