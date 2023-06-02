@@ -31,21 +31,22 @@
                 </div>
             </div>
         </header>
-    <div class="contenitore_iscrizione">
-         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" id="formaccesso">
-            <label for="nome">Nome</label>
-            <input type="text" placeholder="Inserisci Nome" name="nome" id="nome" required>
-            <label for="cognome">Cognome</label>
-            <input type="text" placeholder="Inserisci Cognome" name="cognome" id="cognome" required>
-            <label for="email">Email</label>
-            <input type="email" placeholder="Inserisci email" name="email" id="email" required>
-            <label for="password">Password</label>
-            <input type="password" placeholder="Inserisci Password" name="password" id="password"  required>
-            <label for="conferma">Conferma password</label>
-            <input type="password" placeholder="Conferma password" name="conferma" id="password"  required>
-            <input type="submit" value="ISCRIVITI" id="bottone_dati">
-        </form>
-    </div>
+            <div class="contenitore_iscrizione">
+                <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" id="formaccesso">
+                    <label for="nome">Nome</label>
+                    <input type="text" placeholder="Inserisci Nome" name="nome" id="nome" required>
+                    <label for="cognome">Cognome</label>
+                    <input type="text" placeholder="Inserisci Cognome" name="cognome" id="cognome" required>
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Inserisci email" name="email" id="email" required>
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Inserisci Password" name="password" id="password"  required>
+                    <label for="conferma">Conferma password</label>
+                    <input type="password" placeholder="Conferma password" name="conferma" id="password"  required>
+                    <input type="submit" value="ISCRIVITI" id="bottone_dati">
+                </form>
+            </div>
+
   
     <p id="paccesso">
         <?php

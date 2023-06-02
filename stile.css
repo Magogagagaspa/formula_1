@@ -554,26 +554,38 @@ li {display: inline;}
 .footer-container-partners-it{border-top: 7px solid rgb(42, 42, 42);;margin-right:10%;border-radius: 5px;}
 
 .footer-copyright{display: flex;margin-bottom: 0px;}
-.footer-copyright h4{margin: 0%;font-size: 10px;margin: auto;margin-bottom:0px;}
+.footer-copyright h4{margin: 0%;font-size: 15px;margin: auto;margin-bottom:0px;font-family: 'formula1-regular';}
 
+/* STAGIONI */
 
+.tabella{overflow-x: scroll;width: 80%;}
 /*CLASSIFICA*/
 
-.tabella{
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 30px;
-}
+
 
 .tab{
-    justify-content: center;
+    margin: auto;
+    overflow:hidden; 
     border-top: solid red 20px;
     border-left: solid red 20px;
     border-bottom: solid red 4px;
     border-right: solid red 4px;
     border-radius: 35px;
-    width: 100%;
+    width: 80%;
+    height:100%;   
 }
+.table-left{float:left;width:10%;}
+.content{float:right;overflow-x:auto;width:90%;}
+.table_right{width:100%;height:100%;}
+@media all and (max-width:480px){
+    .table-left{width:35%;}
+    .content{width:65%;}
+    }
+    
+@media all and (min-width:481px){
+    .table-left{width:30%;}
+    .content{width:70%;}
+    }
 
 #nomigc{
     text-align: center;
@@ -613,6 +625,7 @@ li {display: inline;}
     border-left: solid #fff 2px;
     font-size: 15px;
     color: #fff;
+    
 }
 
 #puntig{
@@ -622,6 +635,8 @@ li {display: inline;}
     font-size: 15px;
     background-color: #3f3d3d;
     color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #titoloclassifica{
@@ -639,7 +654,8 @@ li {display: inline;}
 #bandiera{
     width: 35px;
     height: 25px;
-    padding-top: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 /*TEAMS*/
@@ -928,7 +944,7 @@ li {display: inline;}
 
 #haccesso{
     height: 30%;
-    background-color: #46494a;
+    background-color: #000000;
     flex-wrap: wrap;
     padding: 0;
 
@@ -936,7 +952,7 @@ li {display: inline;}
 
 .logoaccesso {
     height: 100px;
-    width: 100%;
+    margin: auto;
 }
 
 
@@ -949,9 +965,10 @@ li {display: inline;}
     margin: 0 auto;
     display: flex;
     font-family: 'formula1-regular';
-    background: #707171;
+    background: #eb1e1e;
     width: 100%;
     justify-content: center;
+    
     
 }
 
@@ -972,18 +989,26 @@ li {display: inline;}
     margin: 0px 15px;
 }
 
+.contenitore_form{
+    width: 100%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
 #formaccesso{
-    width: 600px;
+    width: 60%;
     display: flex;
     font-family: 'formula1-regular';
     flex-direction: column;
     flex-wrap: wrap;
     margin: auto;
+    margin-top:10vh;
+    margin-bottom: 10vh;
     align-items: center;
-    border-top: solid red 15px;
-    border-right: solid red 15px;
+    border-top: solid #e10600 10px;
+    border-right: solid #e10600 10px;
     border-radius: 20px;
     padding: 5px;
+    box-shadow: 5px 5px 5px grey;
 }
 
 
@@ -1032,15 +1057,15 @@ input::placeholder{
     width: 30%;
     text-align: center;
     height: 50px;
-    border: solid black 2px;
-    border-radius: 2px;
+    border: solid black 1px;
+    border-radius: 100px;
     background: whitesmoke;
     font-family: 'formula1-regular';
     font-size: 15px;
 }
 
 #bottone_dati:hover{
-    background: red;
+    background: #e10600;
     transition: 0.5s;
     opacity: 1;
     transform: scale(1.1);
@@ -1065,7 +1090,7 @@ input::placeholder{
     background: lightgrey;
     width: 50%;
     margin: 20px auto;
-    min-height: 180px;
+
 }
 .credenziali{
     width: 50%;
@@ -1554,6 +1579,8 @@ h1{
     .squadra{width: 100%; text-align: center;}
     .macchina{width: 100%; height: auto; display: flex; align-items: center;}
     .macchina img{height: 100%; width: 100%;} 
+    .footer-copyright h4{font-size: 20px;}
+
 
     
 }
@@ -1570,6 +1597,8 @@ h1{
     .casco img{height: 100%; width: 100%;}
     .numero{margin: auto; width: 25%; height: auto; display: flex; align-items: center; padding: 10px 0px 10px 0px;}
     .numero img{height: 100%; width: 100%;}
+    .footer-copyright h4{font-size: 20px;}
+
 }
 
 @media(max-width:768px){
@@ -1584,6 +1613,7 @@ h1{
     .macchina img{margin: auto;}
     .footer-container-partners img{width: 20%; }
     .footer-container-partners{height:60vh;}
+    .footer-container-img{width: 20%;margin: auto;}
 
 
     /*PILOTI*/
@@ -1597,6 +1627,15 @@ h1{
     .casco img{object-fit: contain;height: 90%;width: 90%;}
     .numero{ width: 25%; height: auto; display: flex; align-items: center; }
     .numero img{ width: 100%;height: 100%;}
+    /*ACCESSO*/
+    #formaccesso{width: 90%;}
+    .info{width:90%;}
+    .contenitore_area_personale{width: 100%; height: auto;}
+    .modifican{right: -150px;}
+    .modificac{right: -150px;}
+    .modificap{right: -150px;}
+    .footer-copyright h4{font-size: 10px;}
+
 }
 
 @media (max-width:1392px){
