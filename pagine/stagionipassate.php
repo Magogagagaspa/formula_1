@@ -1630,27 +1630,7 @@
               <td id="puntig">18</td>
               <td id="puntig">1</td>        
             </tr>
-            <tr>
-              
-              <td id="punti">11</td>
-              <td id="punti">17</td>
-              <td id="punti">19</td>
-              <td id="punti">15</td>
-              <td id="punti">19</td>
-              <td id="punti">18</td>
-              <td id="punti">16</td>
-              <td id="punti">11</td>
-              <td id="punti">RIT</td>
-              <td id="punti">16</td>
-              <td id="punti">14</td>
-              <td id="punti">18</td>
-              <td id="punti">11</td>
-              <td id="punti">RIT</td>
-              <td id="punti">14</td>
-              <td id="punti">RIT</td>
-              <td id="punti">17</td>
-              <td id="punti">0</td>
-            </tr>
+            
             
             </table>
             </div>

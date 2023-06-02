@@ -561,16 +561,18 @@ li {display: inline;}
     border-bottom: solid red 4px;
     border-right: solid red 4px;
     border-radius: 35px;
-    width: 80%;
-    height:100%;   
+    width: 70%;
+    height:100%; 
+    display: flex;  
+    position: relative;
 }
-.table-left{float:left;width:10%;}
+.table-left{float:left;flex:1;margin-right: 10px;position: absolute;}
 #table{margin: 0px;}
 
-.content{float:left;overflow-x:auto;}
+.content{float:left;overflow-x:auto;flex:2;}
 
-.table-left table{margin-left:0px;}
-.table_right{width:80%;height:100%;}
+.table-left table{margin-left:100px;}
+.table_right{flex:2; }
 @media all and (max-width:480px){
     .table-left{width:35%;}
     .content{width:65%;}
