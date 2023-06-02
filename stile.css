@@ -546,11 +546,11 @@ li {display: inline;}
 .footer-container-partners-it{border-top: 7px solid rgb(42, 42, 42);;margin-right:10%;border-radius: 5px;}
 
 .footer-copyright{display: flex;margin-bottom: 0px;}
-.footer-copyright h4{margin: 0%;font-size: 10px;margin: auto;margin-bottom:0px;}
+.footer-copyright h4{margin: 0%;font-size: 15px;margin: auto;margin-bottom:0px;font-family: 'formula1-regular';}
 
 /* STAGIONI */
 
-.tabella{overflow-x: scroll;}
+.tabella{overflow-x: scroll;width: 80%;}
 /*CLASSIFICA*/
 
 
@@ -936,7 +936,7 @@ li {display: inline;}
 
 #haccesso{
     height: 30%;
-    background-color: #46494a;
+    background-color: #000000;
     flex-wrap: wrap;
     padding: 0;
 
@@ -957,9 +957,10 @@ li {display: inline;}
     margin: 0 auto;
     display: flex;
     font-family: 'formula1-regular';
-    background: #707171;
+    background: #eb1e1e;
     width: 100%;
     justify-content: center;
+    
     
 }
 
@@ -1559,6 +1560,8 @@ h1{
     .squadra{width: 100%; text-align: center;}
     .macchina{width: 100%; height: auto; display: flex; align-items: center;}
     .macchina img{height: 100%; width: 100%;} 
+    .footer-copyright h4{font-size: 20px;}
+
 
     
 }
@@ -1575,6 +1578,8 @@ h1{
     .casco img{height: 100%; width: 100%;}
     .numero{margin: auto; width: 25%; height: auto; display: flex; align-items: center; padding: 10px 0px 10px 0px;}
     .numero img{height: 100%; width: 100%;}
+    .footer-copyright h4{font-size: 20px;}
+
 }
 
 @media(max-width:768px){
@@ -1589,6 +1594,7 @@ h1{
     .macchina img{margin: auto;}
     .footer-container-partners img{width: 20%; }
     .footer-container-partners{height:60vh;}
+    .footer-container-img{width: 20%;margin: auto;}
 
 
     /*PILOTI*/
@@ -1605,6 +1611,12 @@ h1{
     /*ACCESSO*/
     #formaccesso{width: 90%;}
     .info{width:90%;}
+    .contenitore_area_personale{width: 100%; height: auto;}
+    .modifican{right: -150px;}
+    .modificac{right: -150px;}
+    .modificap{right: -150px;}
+    .footer-copyright h4{font-size: 10px;}
+
 }
 
 @media (max-width:1392px){
