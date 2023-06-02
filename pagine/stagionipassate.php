@@ -1174,6 +1174,7 @@
         <div class="tab">
           <div class="table-left">
           <table>
+                  <tr><td id="nomigs">PILOTI</td></tr>
                   <tr><td id="nomigc">HAMILTON</td></tr>
                   <tr> <td id="nomigs">BOTTAS</td></tr>
                   <tr><td id="nomigc">VERSTAPPEN</td></tr>
@@ -1201,7 +1202,7 @@
         <div class="table-right">
           <table >
             <tr>
-              <td id="nomigs">PILOTI</td>
+              
               <td id="gp"><img id="bandiera" src="../immagini/Austria.jpg"></td>
               <td id="gp"><img id="bandiera" src="../immagini/stiria.png"></td>
               <td id="gp"><img id="bandiera" src="../immagini/ungheria.png"></td>

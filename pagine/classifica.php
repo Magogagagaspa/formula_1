@@ -33,8 +33,9 @@
         <div>
           <h1 id="titoloclassifica">CLASSIFICA PILOTI 2023</h1>
         </div>
+        <div class="tab">
         <div class="tabella">
-          <table class="tab"; cellspacing ="0"; cellpadding ="0";>
+          <table >
             <tr>
               <td id="nomigs">PILOTI</td>
               <td id="gp"><img id="bandiera" src="../immagini/bahrain.png"></td>
@@ -625,6 +626,7 @@
             </tr>
             
             </table>
+        </div>
         </div>
       </menu>
 
