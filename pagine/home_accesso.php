@@ -11,6 +11,8 @@
 
       if(isset($_SESSION["accesso"])) {$accesso = $_SESSION["accesso"];} else{$acceso = false;}
       if(isset($_SESSION["nome_squadra"])) {$nome_squadra = $_SESSION["nome_squadra"];} else{$nome_squadra = "";}
+
+      
 ?>
 
 <!DOCTYPE html>
@@ -61,18 +63,14 @@
           </div>
           <div class="saluto_utente" id="area_personale">
             <?php
-                $acceso = false;
-
-                if(isset($_SESSION["accesso"])) $accesso = $_SESSION["accesso"];
-
-                if($acceso === true)
-                {
-                  echo'<a href ="pagina_area_personale.php"><img src="../immagini/iconaomino.png" id="immagineomino"></a>';
-                }
-                else
-                {
-                  echo '<a href ="pagina_area_personale.php"><img src="../immagini/iconaomino.png" id="immagineomino"></a>';
-                }
+              $sqlimg = "SELECT * FROM utente WHERE email = '$email'
+              ";
+      
+              $ris2 = $connessione->query($sqlimg);
+              foreach($ris2 as $riga2){
+                echo'<a href ="pagina_area_personale.php"><img src="../immagini/immagini_profilo/'.$riga2["immagine_profilo"].'" id="immagineomino"></a>';
+              }
+                           
             ?>
         </div>
          
