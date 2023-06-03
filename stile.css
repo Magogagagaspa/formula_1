@@ -550,7 +550,7 @@ li {display: inline;}
 
 /* STAGIONI */
 
-.tabella{overflow-x: scroll;width: 80%;}
+.tabella{overflow-x: scroll;width: 100%;}
 /*CLASSIFICA*/
 
 
@@ -571,7 +571,7 @@ li {display: inline;}
 .table_right{width:100%;height:100%;}
 @media all and (max-width:480px){
     .table-left{width:35%;}
-    .content{width:65%;}
+    .content{width:50%;}
     }
     
 @media all and (min-width:481px){
@@ -1616,7 +1616,10 @@ h1{
     .modificac{right: -150px;}
     .modificap{right: -150px;}
     .footer-copyright h4{font-size: 10px;}
-
+    #label_sq{width:60%;}
+    #nome_sq{width:60%;}
+    #bottone_crea{width:60%;}
+    .titoloclassifica h1{font-size: 10px;}
 }
 
 @media (max-width:1392px){
