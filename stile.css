@@ -540,7 +540,7 @@ footer{ background-color: rgb(42, 42, 42);}
 .footer-container-img{width: 10%;margin: auto;}
 .footer-container-img img{width: 100%;height: auto;}
 
-.footer-container-social{display:flex;width: 40%;height: 10%;margin: auto;}
+.footer-container-social{display:flex;width: 40%;height: 5%;margin: auto;}
 .footer-container-social img{height: 100%; width: 100%; object-fit: contain;}
 .footer-container-social a {margin-left: 5%;margin-right: auto;}
 
@@ -551,7 +551,7 @@ footer{ background-color: rgb(42, 42, 42);}
 .footer-container-partners p,h4{color:white; text-align: center;}
 li {display: inline;}
 .footer-container-partners ul{display: block;text-align: center;}
-.footer-container-partners-it{border-top: 7px solid rgb(42, 42, 42);;margin-right:10%;border-radius: 5px;}
+.footer-container-partners-it{border-top: 7px solid rgb(42, 42, 42);border-radius: 5px;}
 
 .footer-copyright{display: flex;margin-bottom: 0px;}
 .footer-copyright h4{margin: 0%;font-size: 15px;margin: auto;margin-bottom:0px;font-family: 'formula1-regular';}
@@ -572,20 +572,13 @@ li {display: inline;}
     border-right: solid red 4px;
     border-radius: 35px;
     width: 80%;
-    height:100%;   
+    height:100%;
+    margin-bottom:10%;
+    margin-top:10%;   
 }
 .table-left{float:left;width:10%;}
 .content{float:right;overflow-x:auto;width:90%;}
 .table_right{width:100%;height:100%;}
-@media all and (max-width:480px){
-    .table-left{width:35%;}
-    .content{width:50%;}
-    }
-    
-@media all and (min-width:481px){
-    .table-left{width:30%;}
-    .content{width:70%;}
-    }
 
 #nomigc{
     text-align: center;
@@ -1565,6 +1558,15 @@ h1{
     color: white;
 }
 
+@media all and (max-width:480px){
+    .table-left{width:35%;}
+    .content{width:50%;}
+    }
+    
+@media all and (min-width:481px){
+    .table-left{width:30%;}
+    .content{width:70%;}
+    }
 
 /*MEDIA*/
 @media(max-width:946px){  
@@ -1635,10 +1637,10 @@ h1{
     .modificac{right: -150px;}
     .modificap{right: -150px;}
     .footer-copyright h4{font-size: 10px;}
-    #label_sq{width:60%;}
-    #nome_sq{width:60%;}
-    #bottone_crea{width:60%;}
-    .titoloclassifica h1{font-size: 10px;}
+    #label_sq{width:70%;}
+    #nome_sq{width:70%;}
+    #bottone_crea{width:70%;}
+    #titoloclassifica{font-size: 20px;}
 }
 
 @media (max-width:1392px){
