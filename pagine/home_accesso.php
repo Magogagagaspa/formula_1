@@ -68,7 +68,7 @@
       
               $ris2 = $connessione->query($sqlimg);
               foreach($ris2 as $riga2){
-                echo'<a href ="pagina_area_personale.php"><img src="../immagini/immagini_profilo/'.$riga2["immagine_profilo"].'" id="immagineomino"></a>';
+                echo'<a href ="pagina_area_personale.php"><img src="'.$riga2["immagine_profilo"].'" id="immagineomino"></a>';
               }
                            
             ?>
