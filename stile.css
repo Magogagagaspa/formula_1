@@ -355,6 +355,8 @@ nav{
 #area_personale{
     border-radius: 300px;
     overflow: hidden;
+    height: 55px;
+    width: 55px;
 }
 
 

@@ -29,10 +29,16 @@ CREATE TABLE IF NOT EXISTS `appartiene` (
   KEY `FK2_cod_squadra` (`cod_squadra`),
   CONSTRAINT `FK1_cod_pilota` FOREIGN KEY (`cod_pilota`) REFERENCES `piloti` (`cod_pilota`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK2_cod_squadra` FOREIGN KEY (`cod_squadra`) REFERENCES `squadra` (`cod_sq`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=815 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=825 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella formula_1.appartiene: ~0 rows (circa)
+-- Dump dei dati della tabella formula_1.appartiene: ~5 rows (circa)
 DELETE FROM `appartiene`;
+INSERT INTO `appartiene` (`cod_ap`, `cod_pilota`, `cod_squadra`) VALUES
+	(820, 1, 82),
+	(821, 2, 82),
+	(822, 3, 82),
+	(823, 5, 82),
+	(824, 6, 82);
 
 -- Dump della struttura di tabella formula_1.piloti
 CREATE TABLE IF NOT EXISTS `piloti` (
@@ -47,26 +53,26 @@ CREATE TABLE IF NOT EXISTS `piloti` (
 -- Dump dei dati della tabella formula_1.piloti: ~20 rows (circa)
 DELETE FROM `piloti`;
 INSERT INTO `piloti` (`nome`, `cognome`, `team`, `cod_pilota`, `foto`) VALUES
-	('Lewis', 'Hamilton', 'Merced', 0, NULL),
-	('George', 'Russell', 'Merced', 1, NULL),
-	('Sergio', 'Perez', 'RedBull', 2, NULL),
-	('Max', 'Verstappen', 'RedBull', 3, NULL),
-	('Oscar', 'Piastri', 'McLaren', 4, NULL),
-	('Lando', 'Norris', 'McLaren', 5, NULL),
-	('Carlos', 'Sainz', 'Ferrari', 6, NULL),
-	('Charles', 'Leclerc', 'Ferrari', 7, NULL),
-	('Zhou', 'Guanyu', 'Alpha Romeo', 8, NULL),
-	('Valtteri', 'Bottas', 'Alpha Romeo', 9, NULL),
-	('Fernando', 'Alonso', 'Aston Martin', 10, NULL),
-	('Lance', 'Stroll', 'Aston Martin', 11, NULL),
-	('Kevin', 'Magnussen', 'Haas', 12, NULL),
-	('Nico', 'Hulkenberg', 'Haas', 13, NULL),
-	('Alexander', 'Albon', 'Williams', 14, NULL),
-	('Logan', 'Sargeant', 'Williams', 15, NULL),
-	('Pierre', 'Gasly', 'Alpine', 16, NULL),
-	('Esteban', 'Ocon', 'Alpine', 17, NULL),
-	('Nick', 'De Vries', 'Alpha Tauri', 18, NULL),
-	('Yuki', 'Tsunoda', 'Alpha Tauri', 19, NULL);
+	('Lewis', 'Hamilton', 'Merced', 0, '../immagini/hamiltonpilota.png'),
+	('George', 'Russell', 'Merced', 1, '../immagini/russellpilota.png'),
+	('Sergio', 'Perez', 'RedBull', 2, '../immagini/perezpilota.png'),
+	('Max', 'Verstappen', 'RedBull', 3, '../immagini/verstappenpilota.png'),
+	('Oscar', 'Piastri', 'McLaren', 4, '../immagini/piastripilota.png'),
+	('Lando', 'Norris', 'McLaren', 5, '../immagini/lanopilota.png'),
+	('Carlos', 'Sainz', 'Ferrari', 6, '../immagini/sainzpilota.png'),
+	('Charles', 'Leclerc', 'Ferrari', 7, '../immagini/leclercpilota.png'),
+	('Zhou', 'Guanyu', 'Alpha Romeo', 8, '../immagini/zhoupilota.png'),
+	('Valtteri', 'Bottas', 'Alpha Romeo', 9, '../immagini/bottaspilota.png'),
+	('Fernando', 'Alonso', 'Aston Martin', 10, '../immagini/alonsopilota.png'),
+	('Lance', 'Stroll', 'Aston Martin', 11, '../immagini/strollpilota.png'),
+	('Kevin', 'Magnussen', 'Haas', 12, '../immagini/kevinpilota.png'),
+	('Nico', 'Hulkenberg', 'Haas', 13, '../immagini/hulkenbergpilota.png'),
+	('Alexander', 'Albon', 'Williams', 14, '../immagini/albonpilota.png'),
+	('Logan', 'Sargeant', 'Williams', 15, '../immagini/sargeantpilota.png'),
+	('Pierre', 'Gasly', 'Alpine', 16, '../immagini/gaslypilota.png'),
+	('Esteban', 'Ocon', 'Alpine', 17, '../immagini/oconpilota.png'),
+	('Nick', 'De Vries', 'Alpha Tauri', 18, '../immagini/devriespilota.png'),
+	('Yuki', 'Tsunoda', 'Alpha Tauri', 19, '../immagini/yukipilota.png');
 
 -- Dump della struttura di tabella formula_1.squadra
 CREATE TABLE IF NOT EXISTS `squadra` (
@@ -81,10 +87,12 @@ CREATE TABLE IF NOT EXISTS `squadra` (
   PRIMARY KEY (`cod_sq`),
   KEY `FK2_emailutente` (`email_utente`),
   CONSTRAINT `FK2_emailutente` FOREIGN KEY (`email_utente`) REFERENCES `utente` (`email`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella formula_1.squadra: ~0 rows (circa)
+-- Dump dei dati della tabella formula_1.squadra: ~1 rows (circa)
 DELETE FROM `squadra`;
+INSERT INTO `squadra` (`cod_sq`, `pilota1`, `pilota2`, `pilota3`, `pilota4`, `pilota5`, `nome_sq`, `email_utente`) VALUES
+	(82, '6', '2', '3', '5', '6', 'fsafa', 'dsa@g');
 
 -- Dump della struttura di tabella formula_1.utente
 CREATE TABLE IF NOT EXISTS `utente` (
@@ -92,14 +100,17 @@ CREATE TABLE IF NOT EXISTS `utente` (
   `cognome` char(50) DEFAULT NULL,
   `email` char(50) NOT NULL,
   `password` char(50) NOT NULL,
-  `immagine_profilo` char(50) DEFAULT '../immagini/immagini_profilo/iconaomino.png',
+  `immagine_profilo` char(50) DEFAULT 'iconaomino.png',
   PRIMARY KEY (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella formula_1.utente: ~1 rows (circa)
+-- Dump dei dati della tabella formula_1.utente: ~4 rows (circa)
 DELETE FROM `utente`;
 INSERT INTO `utente` (`nome`, `cognome`, `email`, `password`, `immagine_profilo`) VALUES
-	('dsa', 'dsa', 'dsa@g', 'dsa', 'fds - 2023.06.02 - 04.19.09.jpg');
+	('dsdasfs', 'dsa', 'dsa@g', 'dsa', 'dsdasfs - 2023.06.03 - 02.14.04.jpg'),
+	('dsadasf', 'dsa', 'dsafsaf@hngfidps', 'dsa', 'dsadasf - 2023.06.05 - 09.42.09.jpg'),
+	('gino', 'gino', 'gino@gino', 'gino', 'gino - 2023.06.05 - 09.40.28.jpg'),
+	('dsa', 'dsa', 'hfisdhgs@gmo', 'dsa', 'dsa - 2023.06.03 - 02.13.10.jpg');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
